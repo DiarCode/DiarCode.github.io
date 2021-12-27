@@ -14,7 +14,7 @@ a:focus,a:active{outline: none;}
 a{color:#000}
 
 nav,footer,header,aside{display: block;}
-
+html, body {width: auto!important; overflow-x: hidden!important} 
 html,body{
 	height: 100%;
 	width: 100%;
@@ -45,18 +45,22 @@ body{
 
 
 .wrapper{
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
 }
 .navbar{
 	width: 100%;
-    display: flex;
-	justify-content: space-between;
-	padding: 2.5rem 12rem;
-	overflow: hidden;
+	padding: 2rem 5rem;
 	background-color: #fff;
-	border: 1px solid #000;
+	border-bottom: 1px solid #000;
 	margin-bottom: 3rem;
+}
+
+.navbar__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .navbar__nav{
@@ -65,7 +69,7 @@ body{
 }
 .navbar__logo{
 	font-size: 1.5rem;
-	margin-right: 3rem;
+	margin-right: 5rem;
 }
 
 .navbar__nav a{
@@ -82,12 +86,16 @@ body{
 
 .about{
 	width: 100%;
-	height: 100hv;
-	display: flex;
-	justify-content: center;
 	padding: 0 12rem;
 	margin-bottom: 5rem;
 }
+
+.about__container{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
 .about__aboutus, .about__guaranty{
 	display: flex;
 	flex-direction: column;
@@ -159,20 +167,19 @@ body{
 }
 
 .goods{
+	margin-bottom: 2rem;
+}
+
+.goods__container{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-bottom: 5rem;
+	margin: 0 auto;
 }
 
 .goods__item {
-	width: 25vw;
+	width: 20rem;
 	text-align: center;
-	margin-right: 0.625rem;
-	margin-bottom: 1.25rem;
-}
-
-.goods__item{
 	padding: 1.8rem 1.25rem;
 }
 
@@ -229,6 +236,7 @@ body{
 .recomended__title{
 	margin-bottom: 1.5rem;
 }
+
 .recomended__title::after{
 	margin: 0 auto;
 	margin-top: 1.5rem;
@@ -236,12 +244,16 @@ body{
 }
 
 footer{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	background-color: #f5dbe4;
 	padding: 1.6rem;
+}
+
+.footer__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;	
 }
 
 .footer__logo{
@@ -263,6 +275,7 @@ footer{
 .links a{
 	font-size: 1.1rem;
 	margin-right: 1.3rem;
+	margin-bottom: 1rem;
 }
 .links a:hover{
 	color:#da6b8e;
@@ -287,4 +300,8 @@ footer{
 }
 .icons a{
 	margin-right: 1.3rem;
+}
+
+.container{
+	max-width: 60rem;
 }
