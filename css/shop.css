@@ -87,16 +87,31 @@ body{
 	margin-right: 0rem;
 }
 
-.content{
-	width: 100%;
-	margin-bottom: 3rem;
-	padding: 1.6rem;
+.titles{
+	font-size: 1.5rem;
 }
 
+.titles::after{
+	content: "";
+    display: block;
+    width: 6.3rem;
+    height: 0.2rem;
+    margin-top: 24px;
+	margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.content{
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 0 1rem;
+}
 .content__container{
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
+	align-items:center;
+	justify-content: center;
 }
 
 .titles{
@@ -108,28 +123,39 @@ body{
 	display: block;
 	width: 6.3rem;
 	height: 0.2rem;
-	margin-top: 1.5rem;
-	margin-bottom: 1.875rem;
+	margin: 0 auto;
+	margin-top: 24px;
+	margin-bottom: 30px;
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .content__choice{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.content__choice button{
-	margin-right: 3rem;
 	margin-bottom: 1rem;
-	font-size: 1.15rem;
-	text-align: left;
+}
+
+.content__choice button{
+	margin-right: 1rem;
+	font-size: 1rem;
+}
+.content__choice button:last-child{
+	margin-right: 0rem;
+}
+
+.selector{
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: 0 2rem;
+}
+.selector__container{
+	margin: 0 auto;
 }
 
 .brand-selector{
+	float: right;
 	color:#000;
 	font-size: 1.15rem;
-	padding: 0.75rem 2.3rem;
-	background-color: #e8e8e8;
+	background:none;
+	border-bottom:1px solid #000;
 	margin-bottom: 1rem;
 }
 
@@ -289,3 +315,74 @@ footer{
 .container{
 	max-width: 60rem;
 }
+
+@media (max-width:910px) {
+	.footer__container{
+		padding: 0 2rem;
+	}
+}
+
+@media all and (max-width: 510px){
+	footer{
+		padding: 2rem;
+	}
+
+	.footer__container{
+		padding: 0;
+	}
+
+	.footer__logo{
+		font-size: 1.3rem;
+		margin-right: 1.5rem;
+	}
+	
+	.line{
+		display: none;
+	}
+	
+	.footer__links{
+		margin-right: 1.1rem;
+	}
+	
+	.links a{
+		font-size: 0.9rem;
+		margin-right: 0.6rem;
+	}	
+	.icons{
+		margin-bottom: 0.8rem;
+	}
+	
+	.icons a img{
+		width: 100%;
+		max-width: 1.1rem;
+		height: auto;
+	}
+	.icons a{
+		margin-right: 0.4rem;
+	}
+}
+
+@media (max-width:440px) {
+	.content__choice button{
+		margin-right: 0.3rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width:397px) {
+	.content__choice button{
+		margin-right: 0.3rem;
+		font-size: 0.9rem;
+		padding: 0.5rem 1.5rem;
+	}
+}
+
+@media (max-width:330px) {
+	.content__choice button{
+		margin-right: 0.3rem;
+		font-size: 0.9rem;
+		padding: 0.4rem 1.2rem;
+	}
+}
+
+
