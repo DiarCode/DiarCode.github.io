@@ -89,30 +89,53 @@ body{
 .search{
 	width: 100%;
 	padding: 0 2rem;
+	margin-bottom: 3.5rem;
 }
 
 .search__container{
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .search__header{
+	width: 31rem;
+	margin-bottom: 2rem;
+	display: inline-block;
 	border-bottom: 1px solid #000;
 }
 
 .search__input{
 	display: flex;
+	align-items:center;
+	justify-content: space-between;
 }
 
 .header__input{
+	width: 100%;
+	font-size: 1.5rem;
+	margin-right: 1rem;
 }
 
 .header__find{
 	background: none;
+
 }
 .header__find img{
 	width: 100%;
 	height: auto;
-	max-width: 2rem;
+	max-width: 1.5rem;
+}
+
+.search__result{
+	font-size: 1.2rem;
+	display: flex;
+	margin-bottom: 3.5rem;
+}
+
+.result__title{
+	margin-right: 1rem;
 }
 
 
