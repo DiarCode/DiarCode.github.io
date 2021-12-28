@@ -55,7 +55,7 @@ body{
 	padding: 2rem 5rem;
 	background-color: #fff;
 	border-bottom: 1px solid #000;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 .navbar__container{
@@ -88,7 +88,6 @@ body{
 
 .search{
 	width: 100%;
-	padding: 0 2rem;
 	margin-bottom: 3.5rem;
 }
 
@@ -312,4 +311,148 @@ footer{
 
 .container{
 	max-width: 60rem;
+}
+
+
+@media (max-width:910px) {
+	.footer__container{
+		padding: 0 2rem;
+	}
+}
+
+@media all and (max-width: 510px){
+	footer{
+		padding: 2rem;
+	}
+
+	.footer__container{
+		padding: 0;
+	}
+
+	.footer__logo{
+		font-size: 1.3rem;
+		margin-right: 1.5rem;
+	}
+	
+	.line{
+		display: none;
+	}
+	
+	.footer__links{
+		margin-right: 1.1rem;
+	}
+	
+	.links a{
+		font-size: 0.9rem;
+		margin-right: 0.6rem;
+	}	
+	.icons{
+		margin-bottom: 0.8rem;
+	}
+	
+	.icons a img{
+		width: 100%;
+		max-width: 1.1rem;
+		height: auto;
+	}
+	.icons a{
+		margin-right: 0.4rem;
+	}
+}
+
+@media (max-width:500px) {
+	.search{
+	}
+	
+	.search__container{
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.search__header{
+		width: 25rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+		border-bottom: 1px solid #000;
+	}
+	
+	.search__input{
+		display: flex;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.header__input{
+		width: 100%;
+		font-size: 1.3rem;
+		margin-right: 1rem;
+	}
+	
+	.header__find{
+		background: none;
+	
+	}
+	.header__find img{
+		width: 100%;
+		height: auto;
+		max-width: 1.5rem;
+	}
+	
+	.search__result{
+		font-size: 1.2rem;
+		display: flex;
+		margin-bottom: 3.5rem;
+	}
+	
+	.result__title{
+		margin-right: 1rem;
+	}
+}
+
+@media (max-width:420px) {
+	.search{
+	}
+	
+	.search__container{
+	}
+	
+	.search__header{
+		width: 21rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+		border-bottom: 1px solid #000;
+	}
+	
+	.header__input{
+		font-size: 1.2rem;
+	}
+	
+	.search__result{
+		font-size: 1.1rem;
+		display: flex;
+	}
+}
+
+@media (max-width:340px) {
+	.navbar{
+		margin-bottom: 3rem;
+	}
+
+	.search__header{
+		width: 18rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+		border-bottom: 1px solid #000;
+	}
+	
+	.header__input{
+		font-size: 1.1rem;
+	}
+	
+	.search__result{
+		font-size: 1rem;
+		display: flex;
+	}
 }

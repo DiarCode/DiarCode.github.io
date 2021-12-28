@@ -88,7 +88,7 @@ body{
 
 .about{
 	width: 100%;
-	padding: 0 12rem;
+	padding: 0 3rem;
 	margin-bottom: 5rem;
 }
 
@@ -308,4 +308,100 @@ footer{
 
 .container{
 	max-width: 60rem;
+}
+
+@media (max-width:910px) {
+	.footer__container{
+		padding: 0 2rem;
+	}
+}
+
+@media all and (max-width: 510px){
+	footer{
+		padding: 2rem;
+	}
+
+	.footer__container{
+		padding: 0;
+	}
+
+	.footer__logo{
+		font-size: 1.3rem;
+		margin-right: 1.5rem;
+	}
+	
+	.line{
+		display: none;
+	}
+	
+	.footer__links{
+		margin-right: 1.1rem;
+	}
+	
+	.links a{
+		font-size: 0.9rem;
+		margin-right: 0.6rem;
+	}	
+	.icons{
+		margin-bottom: 0.8rem;
+	}
+	
+	.icons a img{
+		width: 100%;
+		max-width: 1.1rem;
+		height: auto;
+	}
+	.icons a{
+		margin-right: 0.4rem;
+	}
+}
+
+@media (max-width:560px) {
+	.title{
+		font-size: 1.2rem;
+		margin-bottom: 0.3rem;
+	}
+	
+	.info{
+		font-size: 1.1rem;
+	}
+	
+	.about__aboutus{
+		margin-right: 2rem;
+	}
+	.aboutus{
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width:480px) {
+	.title{
+		font-size: 1rem;
+		margin-bottom: 0.3rem;
+	}
+	
+	.info{
+		font-size: 0.9rem;
+	}
+	
+	.about__aboutus{
+		margin-right: 2rem;
+	}
+	.aboutus{
+		margin-bottom: 1rem;
+	}
+}
+@media (max-width:420px) {
+	.title{
+		font-size: 0.9rem;
+		margin-bottom: 0.3rem;
+	}
+	
+	.info{
+		font-size: 0.7rem;
+	}
+	
+	.about__aboutus{
+		margin-right: 1rem;
+	}
 }
