@@ -202,7 +202,7 @@ body{
 	max-width: 100%;
 	margin-bottom: 3.75rem;
 	background-color: #f5dbe4;
-	padding: 2rem 1rem;
+	padding: 2rem 0;
 }
 
 .emailform__container{
@@ -213,7 +213,7 @@ body{
 }
 
 .emailform__info{
-	max-width: 50%;
+	max-width: 30rem;
 	margin-right: 1rem;
 	font-size: 1.25rem;
 	font-weight: 600;
@@ -221,13 +221,19 @@ body{
 }
 
 .input{
-	padding: 0.625rem 1.875rem;
+	font-size: 0.9rem;
+	padding: 0.5rem 1.5rem;
 	margin-bottom: 0.625rem;
 	margin-right: 0.625rem;
 	border-radius: 2rem;
   	border: solid 1px #000;
   	background-color: rgba(246, 246, 246, 0.5);
 }
+.submit{
+	padding: 0.7rem 1.5rem;
+	font-size: 0.8rem;
+}
+
 .submit:hover{
 	background-color: #ffb0c9;
 }
@@ -263,7 +269,7 @@ footer{
 }
 
 .line{
-	width: 0.2rem;
+	width: 0.3rem;
 	height: 6.25rem;
 	background-color: rgba(0, 0, 0, 0.2);
 	margin-right: 5rem;
@@ -305,4 +311,84 @@ footer{
 
 .container{
 	max-width: 60rem;
+}
+
+@media (max-width:910px) {
+	.emailform__container{
+		padding: 0 2rem;
+	}
+	.footer__container{
+		padding: 0 2rem;
+	}
+}
+
+@media all and (max-width: 510px){
+	.emailform__info{
+		font-size: 1.1rem;
+	}
+	.emailform{
+		padding: 1.5rem 2rem;
+	}
+
+	.emailform__container{
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.input{
+		font-size: 0.9rem;
+		padding: 0.3rem 1rem;
+	}
+	.submit{
+		padding: 0.3rem 1rem;
+	}
+
+	footer{
+		padding: 2rem;
+	}
+
+	.footer__container{
+		padding: 0;
+	}
+
+	.footer__logo{
+		font-size: 1.3rem;
+		margin-right: 1.5rem;
+	}
+	
+	.line{
+		display: none;
+	}
+	
+	.footer__links{
+		margin-right: 1.1rem;
+	}
+	
+	.links a{
+		font-size: 0.9rem;
+		margin-right: 0.6rem;
+	}	
+	.icons{
+		margin-bottom: 0.8rem;
+	}
+	
+	.icons a img{
+		width: 100%;
+		max-width: 1.1rem;
+		height: auto;
+	}
+	.icons a{
+		margin-right: 0.4rem;
+	}
+	
+	.content__choice{
+		margin-bottom: 2rem;
+	}
+	.content__choice button{
+		margin: 0 0.4rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+		padding: 0.6rem 1.5rem;
+	}
+
 }
