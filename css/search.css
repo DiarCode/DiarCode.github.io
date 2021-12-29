@@ -170,6 +170,7 @@ body{
 }
 .btn:hover{
 	background-color: #f5dbe4;
+	transition: all 0.3s ease;
 }
 
 .goods{
@@ -286,6 +287,7 @@ footer{
 }
 .links a:hover{
 	color:#da6b8e;
+	transition: all 0.3s ease;
 }
 
 .links{
