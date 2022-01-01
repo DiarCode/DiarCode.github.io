@@ -312,12 +312,15 @@ footer{
 	max-width: 60rem;
 }
 
+.logo{
+	font-family: 'Brawler', serif;
+}
+
 @media (max-width:910px) {
 	.footer__container{
 		padding: 0 2rem;
 	}
 }
-
 @media all and (max-width: 510px){
 	footer{
 		padding: 2rem;
@@ -357,7 +360,6 @@ footer{
 		margin-right: 0.4rem;
 	}
 }
-
 @media (max-width:560px) {
 	.title{
 		font-size: 1.2rem;
@@ -375,7 +377,6 @@ footer{
 		margin-bottom: 1rem;
 	}
 }
-
 @media (max-width:480px) {
 	.title{
 		font-size: 1rem;
