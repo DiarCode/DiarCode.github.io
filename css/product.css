@@ -52,7 +52,7 @@ body{
 }
 .navbar{
 	width: 100%;
-	padding: 2rem 5rem;
+	padding: 2rem 3rem;
 	background-color: #fff;
 	border-bottom: 1px solid #000;
 	margin-bottom: 3rem;
@@ -71,7 +71,7 @@ body{
 }
 .navbar__logo{
 	font-size: 1.5rem;
-	margin-right: 5rem;
+	margin-right: 3rem;
 }
 
 .navbar__nav a{
@@ -82,8 +82,21 @@ body{
 	color:#ebaac0;
 	transition: all 0.3s ease;
 }
-.navbar__nav a:last-child{
-	margin-right: 0rem;
+
+.navbar__open{
+	display: none;
+	cursor:pointer;
+}
+
+.navbar__close{
+	display: none;
+	cursor:pointer;
+}
+
+.nav__icons img{
+	width: 100%;
+	height: auto;
+	max-width: 1.5rem;
 }
 
 .cart{
@@ -650,5 +663,46 @@ footer{
 	.descrip__info{
 		line-height: 1.3rem;
 		font-size: 0.75rem;
+	}
+}
+
+@media (max-width:690px) {
+	.navbar__nav a{
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width:630px) {
+	.navbar__nav{
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		background-color: #fff;
+		transition: top 1s ease;
+		display: none;
+	}
+
+	.navbar__nav a{
+		font-size: 2.5rem;
+		padding: 1.6rem;
+		text-align: center;
+		margin-right: 0;
+	}
+
+	.navbar__close{
+		display: block;
+		position:absolute;
+		top: 40px;
+		right: 20px;
+	}
+
+	.navbar__open{
+		display: block;
 	}
 }
