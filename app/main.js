@@ -7,9 +7,8 @@ navClose.addEventListener("click", close);
 
 function show() {
     navbar.style.display = "flex";
-    navbar.style.top = "0";
 }
 
 function close() {
-    navbar.style.top = "-100%"
+    navbar.style.display = "none";
 }

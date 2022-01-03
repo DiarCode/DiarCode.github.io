@@ -428,7 +428,6 @@ footer{
 		flex-direction: column;
 		justify-content: center;
 		background-color: #fff;
-		transition: top 0.5s ease;
 		display: none;
 	}
 
