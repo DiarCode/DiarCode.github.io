@@ -669,9 +669,7 @@ footer{
 		z-index: 10;
 		flex-direction: column;
 		justify-content: center;
-		align-self: center;
 		background-color: #fff;
-		transition: top 1s ease;
 		display: none;
 	}
 
@@ -685,8 +683,8 @@ footer{
 	.navbar__close{
 		display: block;
 		position:absolute;
-		top: 40px;
-		right: 20px;
+		top: 30px;
+		right: 40px;
 	}
 
 	.navbar__open{
