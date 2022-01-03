@@ -687,8 +687,8 @@ footer{
 	}
 
 	.navbar__nav a{
-		font-size: 2.5rem;
-		padding: 1.6rem;
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
 		text-align: center;
 		margin-right: 0;
 	}
