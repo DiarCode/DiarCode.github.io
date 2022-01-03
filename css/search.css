@@ -378,8 +378,6 @@ footer{
 }
 
 @media (max-width:500px) {
-	.search{
-	}
 	
 	.search__container{
 		margin: 0 auto;
@@ -429,12 +427,6 @@ footer{
 }
 
 @media (max-width:420px) {
-	.search{
-	}
-	
-	.search__container{
-	}
-	
 	.search__header{
 		width: 21rem;
 		margin-bottom: 2rem;

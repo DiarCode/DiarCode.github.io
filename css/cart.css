@@ -345,22 +345,6 @@ footer{
 }
 
 @media (max-width: 570px) {
-	.cart{
-	}
-	
-	.cart__container{
-	}
-	
-	.cart__header{
-	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
-	}
-	
 	.cart__item{
 		margin-bottom: 4rem;
 	}
@@ -404,34 +388,9 @@ footer{
 		background: none;
 		font-size: 1.6rem;
 	}
-	
-	.counter__num{
-	}
-	
-	.item__price{
-	}
-	
-	.item__delete{
-	}
 }
 
 @media (max-width: 520px) {
-	.cart{
-	}
-	
-	.cart__container{
-	}
-	
-	.cart__header{
-	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
-	}
-	
 	.cart__item{
 		margin-bottom: 3rem;
 	}
@@ -476,37 +435,17 @@ footer{
 		font-size: 1.6rem;
 	}
 	
-	.counter__num{
-	}
-	
 	.item__price{
 		font-size: 1.1rem;
-	}
-	
-	.item__delete{
 	}
 }
 @media (max-width: 470px) {
 	.navbar{
 		margin-bottom: 1rem;
 	}
-	.cart{
-	}
-	
-	.cart__container{
-	}
-	
 	.cart__header{
 		font-size: 1.5rem;
 	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
-	}
-	
 	.cart__item{
 		margin-bottom: 3rem;
 	}
@@ -549,32 +488,14 @@ footer{
 		font-size: 1.3rem;
 	}
 	
-	.counter__num{
-	}
-	
 	.item__price{
 		font-size: 1.1rem;
-	}
-	
-	.item__delete{
 	}
 }
 @media (max-width: 432px) {
-	.cart{
-	}
-	
-	.cart__container{
-	}
 	
 	.cart__header{
 		font-size: 1.5rem;
-	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
 	}
 	
 	.cart__item{
@@ -618,35 +539,15 @@ footer{
 		font-size: 1.3rem;
 	}
 	
-	.counter__num{
-	}
-	
 	.item__price{
 		font-size: 1.1rem;
 		flex: 1;
-	}
-	
-	.item__delete{
 	}
 }
 @media (max-width: 418px) {
-	.cart{
-	}
-	
-	.cart__container{
-	}
-	
 	.cart__header{
 		font-size: 1.5rem;
 	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
-	}
-	
 	.cart__item{
 		margin-bottom: 3rem;
 	}
@@ -693,34 +594,14 @@ footer{
 		font-size: 1.3rem;
 	}
 	
-	.counter__num{
-	}
-	
 	.item__price{
 		font-size: 1.1rem;
-	}
-	
-	.item__delete{
 	}
 }
 @media (max-width: 340px) {
-	.cart{
-	}
-	
-	.cart__container{
-	}
-	
 	.cart__header{
 		font-size: 1.5rem;
 	}
-	
-	.header__total{
-	}
-	.header__title{
-	}
-	.total__total{
-	}
-	
 	.cart__item{
 		margin-bottom: 3rem;
 	}
@@ -766,16 +647,9 @@ footer{
 		background: none;
 		font-size: 1.3rem;
 	}
-	
-	.counter__num{
-	}
-	
 	.item__price{
 		font-size: 1.1rem;
 		flex: 10;
-	}
-	
-	.item__delete{
 	}
 }
 
