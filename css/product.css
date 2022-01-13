@@ -101,7 +101,6 @@ body{
 
 .cart{
 	width: 100%;
-	padding: 0 1rem;
 	margin-bottom: 4rem;
 }
 
@@ -190,6 +189,7 @@ body{
 
 .descrip{
 	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 .descrip__title{
@@ -385,7 +385,7 @@ footer{
 }
 
 .container{
-	max-width: 60rem;
+	max-width: 80rem;
 }
 
 .logo{
