@@ -273,8 +273,8 @@ footer{
 	font-family: 'Poppins', sans-serif;
 }
 
-.links{
-	font-size: 1.15rem;
+.links a{
+	font-size: 1.2rem;
 }
 
 .footer__logo{
@@ -282,7 +282,7 @@ footer{
 	font-family: 'Brawler', serif;
 }
 
-.links a img{
+.icons a img{
 	width: 100%;
 	max-width: 1.3rem;
 	height: auto;
