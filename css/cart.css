@@ -52,7 +52,7 @@ body{
   	flex-direction: column;
  	min-height: 100vh;
 }
-.navbar{
+.navbarr{
 	width: 100%;
 	padding: 2rem 3rem;
 	background-color: #fff;
@@ -231,116 +231,40 @@ body{
 }
 
 footer{
-	width: 100%;
 	background-color: #f5dbe4;
-	padding: 1.6rem;
-}
-
-.footer__container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;	
-}
-
-.footer__logo{
-	font-size: 1.875rem;
-	margin-right: 5rem;
-}
-
-.line{
-	width: 0.2rem;
-	height: 6.25rem;
-	background-color: rgba(0, 0, 0, 0.2);
-	margin-right: 5rem;
-}
-
-.footer__links{
-	margin-right: 5rem;
-}
-
-.links a{
-	font-size: 1.1rem;
-	margin-right: 1.3rem;
-	margin-bottom: 1rem;
-}
-.links a:hover{
-	color:#da6b8e;
-	transition: all 0.3s ease;
+	font-family: 'Poppins', sans-serif;
 }
 
 .links{
-	margin-bottom: 0.8rem;
+	font-size: 1.15rem;
 }
 
-.smalltext{
-	font-size: 0.625rem;
+.footer__logo{
+	font-size: 1.5rem;
+	font-family: 'Brawler', serif;
 }
 
-.icons{
-	margin-bottom: 0.8rem;
-}
-
-.icons a img{
+.links a img{
 	width: 100%;
 	max-width: 1.3rem;
 	height: auto;
 }
-.icons a{
-	margin-right: 1.3rem;
-}
 
-.container{
+.wrapper__container{
 	max-width: 80rem;
 }
 
 .logo{
 	font-family: 'Brawler', serif;
 }
+.logo:hover{
+	color:#ebaac0;
+	transition: all 0.3s ease;
+}
 
 @media (max-width: 910px) {
 	.footer__container{
 		padding: 0 2rem;
-	}
-}
-
-@media all and (max-width: 510px){
-	footer{
-		padding: 2rem;
-	}
-
-	.footer__container{
-		padding: 0;
-	}
-
-	.footer__logo{
-		font-size: 1.3rem;
-		margin-right: 1.5rem;
-	}
-	
-	.line{
-		display: none;
-	}
-	
-	.footer__links{
-		margin-right: 1.1rem;
-	}
-	
-	.links a{
-		font-size: 0.9rem;
-		margin-right: 0.6rem;
-	}	
-	.icons{
-		margin-bottom: 0.8rem;
-	}
-	
-	.icons a img{
-		width: 100%;
-		max-width: 1.1rem;
-		height: auto;
-	}
-	.icons a{
-		margin-right: 0.4rem;
 	}
 }
 
@@ -440,7 +364,7 @@ footer{
 	}
 }
 @media (max-width: 470px) {
-	.navbar{
+	.navbarr{
 		margin-bottom: 1rem;
 	}
 	.cart__header{

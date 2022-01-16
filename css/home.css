@@ -50,13 +50,13 @@ body{
   	flex-direction: column;
  	min-height: 100vh;
 }
-.navbar{
+.navbarr{
 	width: 100%;
 	padding: 2rem 3rem;
 	background-color: #fff;
 }
 
-.navbar__container{
+.navbarcontainer{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -141,13 +141,18 @@ body{
 	border-radius: 2.1rem;
 }
 
-.btn:active{
-	background-color: #f5dbe4;
-	color: #ebaac0;
-}
 .btn:hover{
 	background-color: #f5dbe4;
-	transition: all 0.3s ease;
+	transition: all 0.4s ease;
+}
+
+.pressed{
+	background-color: #f8d2df;
+	color: #000000;
+}
+
+.hideItem{
+	display: none;
 }
 
 .goods{
@@ -168,6 +173,7 @@ body{
 }
 
 .goods__item:hover{
+	color:#000;
 	transform: scale(1.1);
 	box-shadow: 0px 0px 1.25rem 0px rgba(0, 0, 0, 0.1);
 	transition: all 0.4s ease-out;
@@ -220,7 +226,7 @@ body{
 .emailform__container{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 0 auto;
 }
 
@@ -262,73 +268,36 @@ body{
 .recomended__title{
 	margin-bottom: 1.5rem;
 }
-
 footer{
-	width: 100%;
 	background-color: #f5dbe4;
-	padding: 1.6rem;
-}
-
-.footer__container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;	
-}
-
-.footer__logo{
-	font-size: 1.875rem;
-	margin-right: 5rem;
-}
-
-.line{
-	width: 0.3rem;
-	height: 6.25rem;
-	background-color: rgba(0, 0, 0, 0.2);
-	margin-right: 5rem;
-}
-
-.footer__links{
-	margin-right: 5rem;
-}
-
-.links a{
-	font-size: 1.1rem;
-	margin-right: 1.3rem;
-	margin-bottom: 1rem;
-}
-.links a:hover{
-	color:#da6b8e;
-	transition: all 0.3s ease;
+	font-family: 'Poppins', sans-serif;
 }
 
 .links{
-	margin-bottom: 0.8rem;
+	font-size: 1.15rem;
 }
 
-.smalltext{
-	font-size: 0.625rem;
+.footer__logo{
+	font-size: 1.5rem;
+	font-family: 'Brawler', serif;
 }
 
-.icons{
-	margin-bottom: 0.8rem;
-}
-
-.icons a img{
+.links a img{
 	width: 100%;
 	max-width: 1.3rem;
 	height: auto;
 }
-.icons a{
-	margin-right: 1.3rem;
-}
 
-.container{
+.wrapper__container{
 	max-width: 80rem;
 }
 
 .logo{
 	font-family: 'Brawler', serif;
+}
+.logo:hover{
+	color:#ebaac0;
+	transition: all 0.3s ease;
 }
 
 @media (max-width:910px) {
@@ -359,44 +328,6 @@ footer{
 	}
 	.submit{
 		padding: 0.3rem 1rem;
-	}
-
-	footer{
-		padding: 2rem;
-	}
-
-	.footer__container{
-		padding: 0;
-	}
-
-	.footer__logo{
-		font-size: 1.3rem;
-		margin-right: 1.5rem;
-	}
-	
-	.line{
-		display: none;
-	}
-	
-	.footer__links{
-		margin-right: 1.1rem;
-	}
-	
-	.links a{
-		font-size: 0.9rem;
-		margin-right: 0.6rem;
-	}	
-	.icons{
-		margin-bottom: 0.8rem;
-	}
-	
-	.icons a img{
-		width: 100%;
-		max-width: 1.1rem;
-		height: auto;
-	}
-	.icons a{
-		margin-right: 0.4rem;
 	}
 	
 	.content__choice{
