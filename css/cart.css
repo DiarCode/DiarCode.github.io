@@ -127,10 +127,6 @@ body{
 	border-radius: 2.1rem;
 }
 
-.btn:active{
-	background-color: #f5dbe4;
-	color: #ebaac0;
-}
 .btn:hover{
 	background-color: #f5dbe4;
 	transition: all 0.3s ease;
@@ -139,6 +135,7 @@ body{
 .cart{
 	padding: 2rem;
 	flex: 1;
+	margin-bottom: 5rem;
 }
 
 .cart__container{
@@ -163,12 +160,16 @@ body{
 	margin-right: 1rem;
 }
 
+.cart__items{
+	margin-bottom: 5rem;
+}
+
 .cart__item{
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 4rem;
-	/* display: none;             VISIBILITY OF ITEM */
 }
+
 .cart__item::after{
 	content:"";
 	display: inline-block;
@@ -179,7 +180,7 @@ body{
 
 .item__details{
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items:center;
 	flex-wrap: wrap;
 	margin-bottom: 4rem;
@@ -188,14 +189,19 @@ body{
 .item__photo{
 	margin-right: 2rem;
 }
+
 .item__photo img{
 	width: 100%;
 	height: auto;
 	max-width: 2.5rem;
 }
-
+.item__name{
+	width: 45%;
+}
 .name__brand{
-	font-size: 1rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	margin-bottom: 0.3rem;
 }
 
 .name__name{
@@ -204,6 +210,7 @@ body{
 }
 
 .item__counter{
+	width: 25%;
 	display: flex;
 	align-items: center;
 	font-size: 1.5rem;
@@ -220,6 +227,7 @@ body{
 }
 
 .item__price{
+	width: 25%;
 	font-size: 1.3rem;
 	font-weight: 700;
 }
@@ -228,6 +236,35 @@ body{
 	font-size: 2.3rem;
 	transform: rotate(-45deg);
 	background: none;
+}
+
+.cart__payment{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.payment__promo{
+	margin-right: 1rem;
+}
+.promo__input{
+	border: 1px solid #000;
+	border-radius: 10rem;
+	margin-right: 1rem;
+	padding: 0.7rem 5rem;
+}
+.promo__submit{
+	color: #000;
+	background-color: #e8e8e8;
+	border-radius: 10rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.9rem;
+}
+
+.payment__btn{
+	font-size: 1.2rem;
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	background-color: #f5dbe4;
 }
 
 footer{
@@ -262,12 +299,22 @@ footer{
 	transition: all 0.3s ease;
 }
 
+
+@media (max-width: 991px) {
+	.item__name{
+		width: 43%;
+	}
+}
 @media (max-width: 910px) {
 	.footer__container{
 		padding: 0 2rem;
 	}
 }
-
+@media (max-width: 640px) {
+	.item__price{
+		width: 20%;
+	}
+}
 @media (max-width: 570px) {
 	.cart__item{
 		margin-bottom: 4rem;
@@ -361,8 +408,9 @@ footer{
 	
 	.item__price{
 		font-size: 1.1rem;
-	}
+	}	
 }
+
 @media (max-width: 470px) {
 	.navbarr{
 		margin-bottom: 1rem;
@@ -416,8 +464,21 @@ footer{
 		font-size: 1.1rem;
 	}
 }
+@media (max-width: 445px) {
+	.item__counter{
+		width: 24%;
+	}
+}
 @media (max-width: 432px) {
 	
+	.cart{
+		margin-bottom: 3rem;
+	}
+
+	.cart__items{
+		margin-bottom: 2rem;
+	}
+
 	.cart__header{
 		font-size: 1.5rem;
 	}
@@ -466,6 +527,24 @@ footer{
 	.item__price{
 		font-size: 1.1rem;
 		flex: 1;
+	}
+
+	.cart__payment{
+		flex-direction: column;
+	}
+
+	.payment__promo{
+		margin-bottom: 3rem;
+	}
+
+
+	.payment__btn{
+		margin-top: 0;
+		font-size: 1.1rem;
+		padding: 0.8rem 3rem;
+	}
+	.promo__input{
+		padding: 0.6rem 1.5rem;
 	}
 }
 @media (max-width: 418px) {
@@ -520,6 +599,14 @@ footer{
 	
 	.item__price{
 		font-size: 1.1rem;
+	}
+}
+@media (max-width: 363px){
+	.promo__input{
+		padding: 0.7rem 0.8rem;
+	}
+	.promo__submit{
+		padding: 0.7rem 1.1rem;
 	}
 }
 @media (max-width: 340px) {
@@ -614,4 +701,5 @@ footer{
 	.navbar__open{
 		display: block;
 	}
+
 }

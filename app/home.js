@@ -8,6 +8,13 @@ const newItems = document.getElementsByName("new");
 const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
+//Setting local Storage
+if (localStorage.getItem("itemsList") == null) {
+    localStorage.setItem("itemsList", []);
+}
+
+
+
 //Event Listeners
 navOpen.addEventListener("click", show);
 navClose.addEventListener("click", close);

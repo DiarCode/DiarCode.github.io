@@ -50,10 +50,12 @@ body{
   	flex-direction: column;
  	min-height: 100vh;
 }
-.navbar{
+.navbarr{
 	width: 100%;
 	padding: 2rem 3rem;
 	background-color: #fff;
+	border-bottom: 1px solid #000;
+	margin-bottom: 3rem;
 }
 
 .navbar__container{
@@ -65,9 +67,9 @@ body{
 
 .navbar__nav{
 	display: flex;
+	flex-wrap: wrap;
 }
 .navbar__logo{
-	font-family: 'Brawler', serif;
 	font-size: 1.5rem;
 	margin-right: 3rem;
 }
@@ -80,6 +82,7 @@ body{
 	color:#ebaac0;
 	transition: all 0.3s ease;
 }
+
 .navbar__open{
 	display: none;
 	cursor:pointer;
@@ -96,20 +99,128 @@ body{
 	max-width: 1.5rem;
 }
 
-.home__img{
-	margin-bottom: 3rem;
+.cart{
+	width: 100%;
+	margin-bottom: 6rem;
 }
 
-.home__img img{
+.cart__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 5rem;
+}
+
+.cart__img{
+	margin-right: 5rem;
+}
+
+.cart__detail{
+	display: flex;
+	flex-direction: column;
+}
+
+.cart__img img{
 	width: 100%;
 	height: auto;
+	max-width: 30rem;
+}
+
+.detail__brand{
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.detail__title{
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 1.3rem;
+}
+
+.detail__measure{
+	display: flex;
+	margin-bottom: 2.3rem;
+}
+
+.measure{
+	font-size: 0.7rem;
+	margin-right: 0.7rem;
+	padding: 0.4rem 1.1rem;
+	background-color: #e8e8e8;
+	border-radius: 2.1rem;
+}
+
+.measure:hover{
+	background-color: #f5dbe4;
+	transition: all 0.3s ease;
+}
+
+.detail__price{
+	font-size: 1.8rem;
+  	font-weight: 700;
+	margin-bottom: 2.3rem;
+}
+
+.detail__add{
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+}
+
+.add__count{
+	display: flex;
+	align-items:center;
+	background-color: #e8e8e8;
+	margin-right: 2rem;
+	border-radius: 2.1rem;
+}
+
+.add__count button{
+	font-size: 1.2rem;
+	background: none;
+	padding: 0.4rem 1.6rem;
+}
+
+.add__tocart{
+	font-size: 1.1rem;
+	padding: 0.7rem 1.9rem;
+	background-color: #f5dbe4;
+	border-radius: 2.1rem;
+}
+.add__tocart:hover{
+	transform: scale(1.05);
+	transition: all 0.5s ease;
+}
+
+.descrip{
+	max-width: 30rem;
+}
+
+.descrip__title{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 0.7rem;
+}
+.descrip__info{
+	line-height: 1.3rem;
+	font-size: 0.9rem;
+}
+
+.title{
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+}
+
+.info{
+	font-size: 1.2rem;
 }
 
 .content{
 	display: flex;
 	flex-direction: column;
-	align-items:center;
-	justify-content: center;
+	padding: 0 12rem;
 }
 .titles{
 	font-size: 1.5rem;
@@ -120,45 +231,21 @@ body{
 	display: block;
 	width: 6.3rem;
 	height: 0.2rem;
-	margin: 0 auto;
-	margin-top: 24px;
-	margin-bottom: 30px;
+	margin-top: 1.5rem;
+	margin-bottom: 1.875rem;
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.content__choice{
-	margin-bottom: 4rem;
-}
-.content__choice button{
-	margin: 0 1.25rem;
-	margin-bottom: 1rem;
-	font-size: 1.15rem;
-}
-
 .btn{
-	color:#000;
+	color: #000;
 	padding: 0.75rem 2.3rem;
 	background-color: #e8e8e8;
 	border-radius: 2.1rem;
 }
 
-.btn:active{
-	background-color: #f5dbe4;
-	color: #ebaac0;
-}
 .btn:hover{
 	background-color: #f5dbe4;
 	transition: all 0.3s ease;
-}
-
-.pressed{
-	background-color: #f5dbe4;
-	color: #000000;
-	transition: all 0.3s ease;
-}
-
-.hideItem{
-	display: none;
 }
 
 .goods{
@@ -179,9 +266,9 @@ body{
 }
 
 .goods__item:hover{
+	color:#000;
 	transform: scale(1.1);
 	box-shadow: 0px 0px 1.25rem 0px rgba(0, 0, 0, 0.1);
-	color:#000;
 	transition: all 0.4s ease-out;
 }
 
@@ -222,47 +309,6 @@ body{
 	font-weight: 700;
 }
 
-.emailform{
-	max-width: 100%;
-	margin-bottom: 3.75rem;
-	background-color: #f5dbe4;
-	padding: 2rem 0;
-}
-
-.emailform__container{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-}
-
-.emailform__info{
-	max-width: 30rem;
-	margin-right: 1rem;
-	font-size: 1.25rem;
-	font-weight: 600;
-	color: #404040;
-}
-
-.input{
-	font-size: 0.9rem;
-	padding: 0.5rem 1.5rem;
-	margin-bottom: 0.625rem;
-	margin-right: 0.625rem;
-	border-radius: 2rem;
-  	border: solid 1px #000;
-  	background-color: rgba(246, 246, 246, 0.5);
-}
-.submit{
-	padding: 0.7rem 1.5rem;
-	font-size: 0.8rem;
-}
-
-.submit:hover{
-	background-color: #ffb0c9;
-	transition: all 0.3s ease;
-}
-
 .recomended{
 	display: flex;
 	flex-direction: column;
@@ -274,9 +320,10 @@ body{
 .recomended__title{
 	margin-bottom: 1.5rem;
 }
-
-.logo{
-	font-family: 'Brawler', serif;
+.recomended__title::after{
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	margin-bottom: 1.875rem;
 }
 
 footer{
@@ -303,43 +350,246 @@ footer{
 	max-width: 80rem;
 }
 
-@media (max-width:910px) {
-	.emailform__container{
+.logo{
+	font-family: 'Brawler', serif;
+}
+.logo:hover{
+	color:#ebaac0;
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 910px) {
+	.footer__container{
 		padding: 0 2rem;
 	}
 }
 
-@media all and (max-width: 510px){
-	.emailform__info{
-		font-size: 1.1rem;
+@media (max-width: 652px) {
+	.cart__img{
+		margin-right: 3rem;
 	}
-	.emailform{
-		padding: 1.5rem 2rem;
-	}
+}
 
-	.emailform__container{
-		margin: 0 auto;
-		padding: 0;
+@media (max-width: 630px) {
+	.cart__img{
+		margin-right: 2rem;
 	}
-
-	.input{
-		font-size: 0.9rem;
-		padding: 0.3rem 1rem;
+	.cart__img img{
+		max-width: 20rem;
 	}
-	.submit{
-		padding: 0.3rem 1rem;
+	.detail__brand{
+		font-size: 0.8rem;
 	}
 	
-	.content__choice{
+	.detail__title{
+		font-size: 2rem;
+		margin-bottom: 1.3rem;
+	}
+	
+	.detail__price{
+		font-size: 1.8rem;
 		margin-bottom: 2rem;
 	}
-	.content__choice button{
-		margin: 0 0.4rem;
-		margin-bottom: 0.5rem;
+	
+	.add__count{
+		margin-right: 1rem;
+	}
+	
+	.add__count button{
+		padding: 0.2rem 1rem;
+	}
+	
+	.add__tocart{
 		font-size: 0.9rem;
-		padding: 0.6rem 1.5rem;
+		padding: 0.4rem 1rem;
+	}
+	
+	.descrip{
+		margin: 0 auto;
+	}
+	
+	.descrip__title{
+		font-size: 1rem;
+		margin-bottom: 0.7rem;
+	}
+	.descrip__info{
+		line-height: 1.3rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 460px) {
+	.cart__img{
+		margin-right: 2rem;
+	}
+	.cart__img img{
+		max-width: 20rem;
+	}
+	.detail__brand{
+		font-size: 0.8rem;
+	}
+	
+	.detail__title{
+		font-size: 1.7rem;
+		margin-bottom: 1rem;
+	}
+	.detail__measure{
+		margin-bottom: 2rem;
 	}
 
+	.detail__price{
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+	
+	.add__count{
+		margin-right: 1rem;
+	}
+	
+	.add__count button{
+		padding: 0.2rem 1.1rem;
+	}
+	
+	.add__tocart{
+		font-size: 0.9rem;
+		padding: 0.4rem 1rem;
+	}
+	
+	.descrip__title{
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+	}
+	.descrip__info{
+		line-height: 1.3rem;
+		font-size: 0.85rem;
+	}
+}
+@media (max-width: 440px) {
+	.detail__brand{
+		font-size: 0.7rem;
+	}
+	
+	.detail__title{
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+	.detail__measure{
+		margin-bottom: 2rem;
+	}
+
+	.detail__price{
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+	}
+	
+	.add__count{
+		margin-right: 1rem;
+	}
+	
+	.add__count button{
+		padding: 0.1rem 1.1rem;
+	}
+	
+	.add__tocart{
+		font-size: 0.8rem;
+		padding: 0.4rem 1rem;
+	}
+	
+	.descrip__title{
+		font-size: 0.8rem;
+		margin-bottom: 0.5rem;
+	}
+	.descrip__info{
+		line-height: 1.3rem;
+		font-size: 0.75rem;
+	}
+}
+@media (max-width: 410px) {
+	.detail__brand{
+		font-size: 0.7rem;
+	}
+	
+	.detail__title{
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	.detail__measure{
+		margin-bottom: 1.3rem;
+	}
+
+	.detail__price{
+		font-size: 1.2rem;
+		margin-bottom: 1.3rem;
+	}
+	
+	.add__count{
+		margin-right: 1rem;
+	}
+	
+	.add__count button{
+		padding: 0.1rem 1.1rem;
+	}
+	
+	.add__tocart{
+		font-size: 0.8rem;
+		padding: 0.4rem 1rem;
+	}
+	
+	.descrip__title{
+		font-size: 0.8rem;
+		margin-bottom: 0.5rem;
+	}
+	.descrip__info{
+		line-height: 1.3rem;
+		font-size: 0.75rem;
+	}
+}
+@media (max-width: 390px) {
+	.detail__brand{
+		font-size: 0.6rem;
+		margin-bottom: 0.2rem;
+	}
+	
+	.detail__title{
+		font-size: 1.3rem;
+		margin-bottom: 0.6rem;
+	}
+	.detail__measure{
+		margin-bottom: 1.3rem;
+		font-size: rem;
+	}
+
+	.measure{
+		font-size: 0.6rem;
+	}
+
+	.detail__price{
+		font-size: 1.2rem;
+		margin-bottom: 1.3rem;
+	}
+	
+	.add__count{
+		margin-right: 1rem;
+		font-size: 0.85rem;
+	}
+	
+	.add__count button{
+		padding: 0.1rem 1rem;
+	}
+	
+	.add__tocart{
+		font-size: 0.8rem;
+		padding: 0.3rem 1.2rem;
+	}
+	
+	.descrip__title{
+		font-size: 0.8rem;
+		margin-bottom: 0.5rem;
+	}
+	.descrip__info{
+		line-height: 1.3rem;
+		font-size: 0.75rem;
+	}
 }
 
 @media (max-width:690px) {

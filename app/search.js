@@ -38,14 +38,16 @@ function findItem() {
     }
 
     //Filter by product name
-    inputValue = inputValue.toLowerCase().split("");
-    searchItems.forEach(element => {
-        let itemName = element.getElementsByClassName("item__name")[0].innerHTML.toLowerCase().split("");
-        let count = 0;
-        for (let index = 0; index < 3; index++) {
-            if (inputValue[index] === itemName[index]) count++;
-        }
-        if (count == 3) element.classList.remove("hideItem");
-    });
-
+    if(inputValue != undefined) {
+        inputValue = inputValue.toLowerCase().split("");
+        searchItems.forEach(element => {
+            let itemName = element.getElementsByClassName("item__name")[0].innerHTML;
+            itemName = itemName.toLowerCase().split("");
+            let count = 0;
+            for (let index = 0; index < 3; index++) {
+                if (inputValue[index] === itemName[index]) count++;
+            }
+            if (count == 3) element.classList.remove("hideItem");
+        });
+    }
 }

@@ -2,10 +2,13 @@ const navbar = document.querySelector(".navbar__nav");
 const navClose = document.querySelector(".navbar__close");
 const navOpen = document.querySelector(".navbar__open");
 
+const cart = document.querySelector(".cart__items");
+addToCart();
+
 const cartTotal = document.querySelector(".total__price");
-const cartItems = document.querySelectorAll(".cart__item");
 const cartCountAdd = document.querySelectorAll(".counter__plus");
 const cartCountSubstract = document.querySelectorAll(".counter__minus");
+const cartDelete = document.querySelectorAll(".item__delete");
 
 
 //Event Listeners
@@ -16,6 +19,9 @@ cartCountAdd.forEach(element => {
 });
 cartCountSubstract.forEach(element => {
     element.addEventListener("click", countSubs);
+});
+cartDelete.forEach(element => {
+    element.addEventListener("click", remove);
 });
 
 
@@ -64,15 +70,106 @@ function countSubs(event) {
     calculateTotal();
 }
 
+function remove(event) {
+    const deleteBtn = event.target;
+    const itemDetails = deleteBtn.parentElement;
+    const currentItem = itemDetails.parentElement;
+    currentItem.remove();
+
+    const itemName = itemDetails.querySelector(".name__name").innerHTML;
+    const itemBrand = itemDetails.querySelector(".name__brand").innerHTML;
+    const itemPrice = itemDetails.querySelector(".item__price").innerHTML;
+
+    let localData = localStorage.getItem("itemsList")
+    if (localData != undefined) {
+        let localData = localData.split(",");
+        for (let i = 0; i < localData.length; i+=3) {
+            if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == itemPrice) {
+                localData.splice(i,3);
+            }
+        }
+    }
+    
+    console.log(localData);
+    localStorage.setItem("itemsList", localData);
+    calculateTotal();
+}
+
 function calculateTotal() {
+    const cartItems = document.querySelectorAll(".cart__item");
     let result = 0;
     cartItems.forEach(element => {
         let price = parseFloat(element.querySelector(".item__price").innerHTML.split("£")[1]);
         result+=price;
     });
-    if (result < 100) {
-        cartTotal.innerHTML = "£" + result.toPrecision(4);
-    } else cartTotal.innerHTML = "£" + result.toPrecision(5);
+    if (result < 100) cartTotal.innerHTML = "£" + result.toPrecision(4);
+    else cartTotal.innerHTML = "£" + result.toPrecision(5);
+}
+
+function addToCart() {
+    const itemData = localStorage.getItem("itemsList");
+    if (itemData != undefined) {
+        itemData =itemData.split(",");
+        for (let index = 0; index < itemData.length; index+=3) {
+            const itemBrand = itemData[index];
+            const itemName = itemData[index+1];
+            const itemPrice = itemData[index+2];
+    
+            const newItem = document.createElement("div");
+            newItem.classList.add("cart__item");
+    
+            const itemDetails = document.createElement("div");
+            itemDetails.classList.add("item__details");
+    
+            const nameDiv = document.createElement("div");
+            nameDiv.classList.add("item__name");
+    
+            const nameBrand = document.createElement("div");
+            nameBrand.classList.add("name__brand");
+            nameBrand.innerHTML = itemBrand;
+            nameDiv.appendChild(nameBrand);
+    
+            const nameName = document.createElement("div");
+            nameName.classList.add("name__name");
+            nameName.innerHTML = itemName;
+            nameDiv.appendChild(nameName);
+    
+            const itemCounter = document.createElement("div");
+            itemCounter.classList.add("item__counter");
+    
+            const counterMinus = document.createElement("button");
+            counterMinus.classList.add("counter__minus");
+            counterMinus.innerHTML = "-";
+            itemCounter.appendChild(counterMinus);
+    
+            const counterNum = document.createElement("div");
+            counterNum.classList.add("counter__num");
+            counterNum.innerHTML = "1";
+            itemCounter.appendChild(counterNum);
+    
+            const counterAdd = document.createElement("button");
+            counterAdd.classList.add("counter__plus");
+            counterAdd.innerHTML = "+";
+            itemCounter.appendChild(counterAdd);
+    
+            const price = document.createElement("div");
+            price.classList.add("item__price");
+            let dataPrice = itemPrice.split("£")[1];
+            price.setAttribute("data-price", dataPrice);
+            price.innerHTML = itemPrice;
+    
+            const itemDelete = document.createElement("button");
+            itemDelete.classList.add("item__delete");
+            itemDelete.innerHTML = "+";
+    
+            itemDetails.appendChild(nameDiv);
+            itemDetails.appendChild(itemCounter);
+            itemDetails.appendChild(price);
+            itemDetails.appendChild(itemDelete);
+            newItem.appendChild(itemDetails);
+            cart.appendChild(newItem);
+        }
+    }
 }
 
 

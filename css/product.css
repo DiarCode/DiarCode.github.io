@@ -135,13 +135,13 @@ body{
 
 .detail__measure{
 	display: flex;
-	margin-bottom: 2.3rem;
+	margin-bottom: 3rem;
 }
 
 .measure{
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	margin-right: 0.7rem;
-	padding: 0.4rem 1.1rem;
+	padding: 0.6rem 1.3rem;
 	background-color: #e8e8e8;
 	border-radius: 2.1rem;
 }
@@ -152,34 +152,14 @@ body{
 }
 
 .detail__price{
-	font-size: 1.8rem;
+	font-size: 2rem;
   	font-weight: 700;
-	margin-bottom: 2.3rem;
-}
-
-.detail__add{
-	display: flex;
-	align-items: center;
-	font-size: 1.1rem;
-}
-
-.add__count{
-	display: flex;
-	align-items:center;
-	background-color: #e8e8e8;
-	margin-right: 2rem;
-	border-radius: 2.1rem;
-}
-
-.add__count button{
-	font-size: 1.2rem;
-	background: none;
-	padding: 0.4rem 1.6rem;
+	margin-bottom: 4rem;
 }
 
 .add__tocart{
-	font-size: 1rem;
-	padding: 0.6rem 1.8rem;
+	font-size: 1.1rem;
+	padding: 0.9rem 2.7rem;
 	background-color: #f5dbe4;
 	border-radius: 2.1rem;
 }
