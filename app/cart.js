@@ -81,7 +81,7 @@ function remove(event) {
     const itemPrice = itemDetails.querySelector(".item__price").innerHTML;
 
     let localData = localStorage.getItem("itemsList")
-    if (localData != undefined) {
+    if (localData != "") {
         localData = localData.split(",");
         for (let i = 0; i < localData.length; i+=3) {
             if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == itemPrice) {
@@ -109,7 +109,7 @@ function calculateTotal() {
 
 function addToCart() {
     let itemData = localStorage.getItem("itemsList");
-    if (itemData != undefined) {
+    if (itemData != "") {
         let splittedItemData = itemData.split(",");
         for (let index = 0; index < splittedItemData.length; index+=3) {
             let itemBrand = splittedItemData[index];

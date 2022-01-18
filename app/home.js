@@ -9,8 +9,8 @@ const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
 //Setting local Storage
-if (localStorage.getItem("itemsList") == null) {
-    localStorage.setItem("itemsList", []);
+if (localStorage.getItem("itemsList") == "") {
+    localStorage.setItem("itemsList", "");
 }
 
 

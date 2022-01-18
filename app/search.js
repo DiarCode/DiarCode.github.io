@@ -28,7 +28,7 @@ function findItem() {
         element.classList.add("hideItem")
     });
     let inputValue = searchInput.value;
-    if (inputValue !== "") {
+    if (inputValue != "") {
         searchResultTitle.style.display = "inline"
         searchResult.style.display = "inline";
         searchResult.innerHTML = '"' + inputValue + '"';
@@ -38,7 +38,7 @@ function findItem() {
     }
 
     //Filter by product name
-    if(inputValue != undefined) {
+    if(inputValue != "") {
         inputValue = inputValue.toLowerCase().split("");
         searchItems.forEach(element => {
             let itemName = element.getElementsByClassName("item__name")[0].innerHTML;
