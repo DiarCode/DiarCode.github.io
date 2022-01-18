@@ -82,7 +82,7 @@ function remove(event) {
 
     let localData = localStorage.getItem("itemsList")
     if (localData != undefined) {
-        let localData = localData.split(",");
+        localData = localData.split(",");
         for (let i = 0; i < localData.length; i+=3) {
             if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == itemPrice) {
                 localData.splice(i,3);
@@ -102,18 +102,19 @@ function calculateTotal() {
         let price = parseFloat(element.querySelector(".item__price").innerHTML.split("£")[1]);
         result+=price;
     });
-    if (result < 100) cartTotal.innerHTML = "£" + result.toPrecision(4);
-    else cartTotal.innerHTML = "£" + result.toPrecision(5);
+    if (result < 100 && result > 0) cartTotal.innerHTML = "£" + result.toPrecision(4);
+    else if (result >= 100) cartTotal.innerHTML = "£" + result.toPrecision(5);
+    else cartTotal.innerHTML = "£" + result.toPrecision(1);
 }
 
 function addToCart() {
-    const itemData = localStorage.getItem("itemsList");
+    let itemData = localStorage.getItem("itemsList");
     if (itemData != undefined) {
-        itemData =itemData.split(",");
-        for (let index = 0; index < itemData.length; index+=3) {
-            const itemBrand = itemData[index];
-            const itemName = itemData[index+1];
-            const itemPrice = itemData[index+2];
+        let splittedItemData = itemData.split(",");
+        for (let index = 0; index < splittedItemData.length; index+=3) {
+            let itemBrand = splittedItemData[index];
+            let itemName = splittedItemData[index+1];
+            let itemPrice = splittedItemData[index+2];
     
             const newItem = document.createElement("div");
             newItem.classList.add("cart__item");
