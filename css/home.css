@@ -184,11 +184,12 @@ body{
 }
 
 .item__img img{
-	max-width: 10rem;
-	height: 10rem;
+	max-width: 12rem;
+	height: 12rem;
 }
 
 .item__brand{
+	text-transform: uppercase;
 	font-size: 0.8rem;
 	margin-bottom: 0.625rem;
 }
