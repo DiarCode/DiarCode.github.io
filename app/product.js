@@ -25,5 +25,8 @@ function addToCart() {
 
     itemsData+= itemsData == "" ? newItemData : ","+newItemData;
     localStorage.setItem("itemsList", itemsData);
-    console.log(itemsData);
+
+    toCartBtn.classList.add("add__tocartPressed");
+    toCartBtn.disabled = true;
+    toCartBtn.innerHTML = "Added"
 }
