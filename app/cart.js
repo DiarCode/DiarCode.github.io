@@ -74,23 +74,23 @@ function remove(event) {
     const deleteBtn = event.target;
     const itemDetails = deleteBtn.parentElement;
     const currentItem = itemDetails.parentElement;
+
     currentItem.remove();
 
     const itemName = itemDetails.querySelector(".name__name").innerHTML;
     const itemBrand = itemDetails.querySelector(".name__brand").innerHTML;
-    const itemPrice = itemDetails.querySelector(".item__price").innerHTML;
+    const itemPrice = itemDetails.querySelector(".item__price").dataset.price;
 
     let localData = localStorage.getItem("itemsList")
     if (localData != "") {
         localData = localData.split(",");
         for (let i = 0; i < localData.length; i+=3) {
-            if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == itemPrice) {
+            if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == "£"+itemPrice) {
                 localData.splice(i,3);
             }
         }
     }
     
-    console.log(localData);
     localStorage.setItem("itemsList", localData);
     calculateTotal();
 }

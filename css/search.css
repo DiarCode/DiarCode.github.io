@@ -196,7 +196,6 @@ body{
 
 .goods__container{
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
@@ -257,6 +256,7 @@ body{
 	justify-content: center;
 	text-align: center;
 	flex: 1;
+	margin: 0 auto;
 }
 
 .recomended__title{
