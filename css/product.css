@@ -181,6 +181,10 @@ body{
 	transform: none;
 }
 
+.detail__measure, .add__tocart{
+	color: #000;
+}
+
 .descrip{
 	margin: 0 auto;
 	padding: 0 1rem;
