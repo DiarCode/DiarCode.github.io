@@ -27,6 +27,8 @@ function findItem() {
     searchItems.forEach(element => {
         element.classList.add("hideItem")
     });
+
+    //Filtering product name
     let inputValue = searchInput.value;
     if (inputValue != "") {
         searchResultTitle.style.display = "inline"

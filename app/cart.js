@@ -21,7 +21,7 @@ cartCountSubstract.forEach(element => {
     element.addEventListener("click", countSubs);
 });
 cartDelete.forEach(element => {
-    element.addEventListener("click", remove);
+    element.addEventListener("click", removeFromCart);
 });
 
 
@@ -48,8 +48,7 @@ function countAdd(event) {
         if (newPrice < 100) {
             currentPriceElement.innerHTML = "£" + newPrice.toPrecision(4);
         } else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
-        
-    } else alert("You reached maximum count of this product!");
+    } else alert("You have reached maximum count of this product!");
     calculateTotal();
 }
 
@@ -66,11 +65,11 @@ function countSubs(event) {
         if (newPrice < 100) {
             currentPriceElement.innerHTML = "£" + newPrice.toPrecision(4);
         } else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
-    } else alert("You reached minimun count of this product!");
+    } else alert("You have reached minimun count of this product!");
     calculateTotal();
 }
 
-function remove(event) {
+function removeFromCart(event) {
     const deleteBtn = event.target;
     const itemDetails = deleteBtn.parentElement;
     const currentItem = itemDetails.parentElement;
