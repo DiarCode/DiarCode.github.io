@@ -160,8 +160,8 @@ body{
 }
 
 .goods__container{
-	max-width: 60rem;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
