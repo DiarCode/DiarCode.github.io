@@ -80,10 +80,17 @@ function removeFromCart(event) {
     const itemBrand = itemDetails.querySelector(".name__brand").innerHTML;
     const itemPrice = itemDetails.querySelector(".item__price").dataset.price;
 
-    let localData = JSON.parse(localStorage.getItem("itemsList")); 
-    localData = localData.filter(item => item.name !== itemName);
+    let localData = localStorage.getItem("itemsList")
+    if (localData != "") {
+        localData = localData.split(",");
+        for (let i = 0; i < localData.length; i+=3) {
+            if (localData[i] == itemBrand && localData[i+1] == itemName && localData[i+2] == "£"+itemPrice) {
+                localData.splice(i,3);
+            }
+        }
+    }
     
-    localStorage.setItem("itemsList", JSON.stringify(localData));
+    localStorage.setItem("itemsList", localData);
     calculateTotal();
 }
 
@@ -100,14 +107,14 @@ function calculateTotal() {
 }
 
 function addToCart() {
-    let itemData = JSON.parse(localStorage.getItem("itemsList"));
-    itemData.forEach(item => {
-        if (item !== null) {
-            let itemBrand = item.brand;
-            let itemName = item.name;
-            let itemPrice = item.price;
-            let itemCount = item.count;
-
+    let itemData = localStorage.getItem("itemsList");
+    if (itemData != "") {
+        let splittedItemData = itemData.split(",");
+        for (let index = 0; index < splittedItemData.length; index+=3) {
+            let itemBrand = splittedItemData[index];
+            let itemName = splittedItemData[index+1];
+            let itemPrice = splittedItemData[index+2];
+    
             const newItem = document.createElement("div");
             newItem.classList.add("cart__item");
     
@@ -137,7 +144,7 @@ function addToCart() {
     
             const counterNum = document.createElement("div");
             counterNum.classList.add("counter__num");
-            counterNum.innerHTML = itemCount;
+            counterNum.innerHTML = "1";
             itemCounter.appendChild(counterNum);
     
             const counterAdd = document.createElement("button");
@@ -162,7 +169,7 @@ function addToCart() {
             newItem.appendChild(itemDetails);
             cart.appendChild(newItem);
         }
-    });
+    }
 }
 
 
