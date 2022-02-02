@@ -20,7 +20,7 @@ function addToCart() {
     const itemName = document.querySelector(".detail__title").innerHTML;
     const itemPrice = document.querySelector(".detail__price").innerHTML;
     const newItemData = {brand:itemBrand, name:itemName, price:itemPrice, count:1};
-    let itemsData = JSON.parse(localStorage.getItem("itemsList")) || [];
+    let itemsData = JSON.parse(localStorage.getItem("itemsList") || []);
 
     let isExists = false;
     itemsData.forEach(item => {
