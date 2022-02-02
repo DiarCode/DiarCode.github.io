@@ -39,6 +39,7 @@ function close() {
 function countAdd(event) {
     const currentNumElement = event.target.parentElement.querySelector(".counter__num");
     const currentPriceElement = event.target.parentElement.parentElement.querySelector(".item__price");
+    //const currentNameElement = event.target.parentElement.parentElement.querySelector(".name__name");
     let constItemPrice = currentPriceElement.dataset.price; 
     let currentNumDigit = parseInt(currentNumElement.innerHTML);
     if (currentNumDigit != 10) {
@@ -164,6 +165,17 @@ function addToCart() {
         }
     });
 }
+
+// Beta feature
+
+// function changeCount(newCount, itemName) {
+//     items = JSON.parse(localStorage.getItem("itemsList"));
+
+//     items.forEach(current => {
+//         if (current["name"] === itemName) current["count"] = newCount;
+//     })
+//     localStorage.setItem("itemsList", JSON.stringify(items));
+// } 
 
 
 
