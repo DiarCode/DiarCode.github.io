@@ -9,7 +9,7 @@ const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
 //Setting local Storage
-
+setLocalstorage();
 
 
 //Event Listeners
@@ -75,4 +75,8 @@ function pressed(event){
     }
 
     pressedBtn.classList.toggle("pressed");
+}
+
+function setLocalstorage() {
+    localStorage.getItem("itemsList") || localStorage.setItem("itemsList", JSON.stringify([]));
 }
