@@ -9,9 +9,6 @@ const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
 //Setting local Storage
-if (JSON.parse(localStorage.getItem("itemsList")) == undefined) {
-    localStorage.setItem("itemsList", JSON.stringify([]));
-}
 
 
 
