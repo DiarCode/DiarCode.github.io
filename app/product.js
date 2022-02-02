@@ -22,7 +22,7 @@ function addToCart() {
     const newItemData = {brand:itemBrand, name:itemName, price:itemPrice, count:1};
 
     let itemsData = JSON.parse(localStorage.getItem("itemsList"));
-    if (itemsData == undefined) itemsData = [];
+    if (itemsData === null) itemsData = [];
 
     let isExists = false;
     itemsData.forEach(item => {
