@@ -36,3 +36,4 @@ function addToCart() {
     toCartBtn.disabled = true;
     toCartBtn.innerHTML = "Added"
 }
+
