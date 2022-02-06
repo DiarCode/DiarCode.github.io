@@ -4,7 +4,6 @@ const navOpen = document.querySelector(".navbar__open");
 
 const searchInput = document.getElementById("searchInput");
 const searchResultTitle = document.querySelector(".result__title")
-const searchBtn = document.querySelector(".header__find");
 const searchResult = document.querySelector(".result__result");
 const searchItems = document.querySelector(".search").querySelectorAll(".goods__item");
 
@@ -12,7 +11,7 @@ const items = document.querySelectorAll(".goods__item");
 
 navOpen.addEventListener("click", show);
 navClose.addEventListener("click", close);
-searchBtn.addEventListener("click", findItem);
+searchInput.addEventListener("input", findItem);
 
 function show() {
     navbar.style.display = "flex";
@@ -23,10 +22,6 @@ function close() {
 }
 
 function findItem() {
-    //Hide all elements
-    searchItems.forEach(element => {
-        element.classList.add("hideItem")
-    });
 
     //Filtering product name
     let inputValue = searchInput.value;
@@ -41,15 +36,15 @@ function findItem() {
 
     //Filter by product name
     if(inputValue != "") {
-        inputValue = inputValue.toLowerCase().split("");
+        inputValue = inputValue.toLowerCase();
         searchItems.forEach(element => {
-            let itemName = element.getElementsByClassName("item__name")[0].innerHTML;
-            itemName = itemName.toLowerCase().split("");
-            let count = 0;
-            for (let index = 0; index < 3; index++) {
-                if (inputValue[index] === itemName[index]) count++;
+            if (element.innerHTML.search(inputValue) === -1) {
+                element.classList.add("hideItem");
             }
-            if (count == 3) element.classList.remove("hideItem");
+        });
+    } else{
+        searchItems.forEach(element => {
+            element.classList.remove("hideItem")
         });
     }
 }

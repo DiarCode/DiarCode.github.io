@@ -37,3 +37,4 @@ function addToCart() {
     toCartBtn.innerHTML = "Added"
 }
 
+

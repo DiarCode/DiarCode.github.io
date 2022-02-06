@@ -8,12 +8,16 @@ const newItems = document.getElementsByName("new");
 const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
+const brandSelector = document.querySelector(".brand-selector");
+const allItems = document.querySelectorAll(".goods__item");
+
 //Event Listeners
 navOpen.addEventListener("click", show);
 navClose.addEventListener("click", close);
 btnCol.forEach(element => {
     element.addEventListener("click", pressed)
 });
+brandSelector.addEventListener("change", sortByBrand);
 
 
 //Functions
@@ -28,7 +32,6 @@ function close() {
 function pressed(event){
     const pressedBtnID = event.target.id;
     const pressedBtn = document.getElementById(pressedBtnID);
-
 
     btnCol.forEach(element => {
         element.classList.remove("pressed");
@@ -71,4 +74,16 @@ function pressed(event){
     }
 
     pressedBtn.classList.toggle("pressed");
+}
+
+function sortByBrand() {
+    const selectedBrand = brandSelector.value;
+    allItems.forEach(element => {
+        const itemBrand = element.querySelector(".item__brand").innerHTML.toLowerCase();
+        if (itemBrand !== selectedBrand) {
+            element.classList.add("hideItem");
+        } else{
+            element.classList.remove("hideItem");
+        }
+    });
 }
