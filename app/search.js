@@ -38,9 +38,8 @@ function findItem() {
     if(inputValue != "") {
         inputValue = inputValue.toLowerCase();
         searchItems.forEach(element => {
-            if (element.innerHTML.search(inputValue) === -1) {
-                element.classList.add("hideItem");
-            }
+            if (element.innerHTML.search(inputValue) === -1) element.classList.add("hideItem");
+            else element.classList.remove("hideItem");
         });
     } else{
         searchItems.forEach(element => {

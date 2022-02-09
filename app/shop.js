@@ -9,7 +9,7 @@ const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 
 const brandSelector = document.querySelector(".brand-selector");
-const allItems = document.querySelectorAll(".goods__item");
+const allItems = document.querySelector(".goods").querySelectorAll(".goods__item");
 
 //Event Listeners
 navOpen.addEventListener("click", show);

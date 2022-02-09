@@ -10,6 +10,9 @@ const cartCountAdd = document.querySelectorAll(".counter__plus");
 const cartCountSubstract = document.querySelectorAll(".counter__minus");
 const cartDelete = document.querySelectorAll(".item__delete");
 
+const saleInput = document.querySelector(".promo__input");
+const saleBtn = document.querySelector(".promo__submit");
+
 //Event Listeners
 navOpen.addEventListener("click", show);
 navClose.addEventListener("click", close);
@@ -22,6 +25,7 @@ cartCountSubstract.forEach(element => {
 cartDelete.forEach(element => {
   element.addEventListener("click", removeFromCart);
 });
+saleBtn.addEventListener("click", usePromocode);
 
 //Functions
 calculateTotal(); //Calculate total current price
@@ -154,7 +158,7 @@ function addToCart() {
       price.classList.add("item__price");
       let dataPrice = itemPrice.split("£")[1];
       price.setAttribute("data-price", dataPrice);
-      price.innerHTML = "£" + parseInt(itemPrice.split("£")[1]) * itemCount;
+      price.innerHTML = "£" + (parseFloat(itemPrice.split("£")[1]) * itemCount).toPrecision(5);
 
       const itemDelete = document.createElement("button");
       itemDelete.classList.add("item__delete");
@@ -179,4 +183,19 @@ function changeCountInLocal(name, newCount) {
     });
   }
   localStorage.setItem("itemsList", JSON.stringify(localData));
+}
+
+function usePromocode() {
+  const promo = saleInput.value.toLowerCase();
+  const REAL_PROMO = "sale";
+  const totalPriceElement = document.querySelector(".total__price")
+  const totalPriceNumber = totalPriceElement.innerHTML.split("£")[1];
+
+  if (promo == "" && totalPriceNumber == "0") return;
+  if (promo === REAL_PROMO) {
+    const newPrice = totalPriceNumber - totalPriceNumber * 0.5;
+    totalPriceElement.innerHTML = "£" + newPrice;
+  }
+  promo === REAL_PROMO ? alert("Success! Your sale is 50%") : alert("Wrong promocode!");
+  
 }
