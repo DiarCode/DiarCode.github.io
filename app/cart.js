@@ -1,15 +1,19 @@
+//Navbar
 const navbar = document.querySelector(".navbar__nav");
 const navClose = document.querySelector(".navbar__close");
 const navOpen = document.querySelector(".navbar__open");
 
+//Add to cart
 const cart = document.querySelector(".cart__items");
 addToCart();
 
+//Cart
 const cartTotal = document.querySelector(".total__price");
 const cartCountAdd = document.querySelectorAll(".counter__plus");
 const cartCountSubstract = document.querySelectorAll(".counter__minus");
 const cartDelete = document.querySelectorAll(".item__delete");
 
+//Promocode
 const saleInput = document.querySelector(".promo__input");
 const saleBtn = document.querySelector(".promo__submit");
 
@@ -39,9 +43,12 @@ function close() {
 }
 
 function countAdd(event) {
-  const currentNumElement = event.target.parentElement.querySelector(".counter__num");
-  const currentPriceElement = event.target.parentElement.parentElement.querySelector(".item__price");
-  const currentNameElement = event.target.parentElement.parentElement.querySelector(".name__name");
+  const currentNumElement =
+    event.target.parentElement.querySelector(".counter__num");
+  const currentPriceElement =
+    event.target.parentElement.parentElement.querySelector(".item__price");
+  const currentNameElement =
+    event.target.parentElement.parentElement.querySelector(".name__name");
   let constItemPrice = currentPriceElement.dataset.price;
   let currentNumDigit = parseInt(currentNumElement.innerHTML);
   if (currentNumDigit != 10) {
@@ -57,11 +64,16 @@ function countAdd(event) {
 }
 
 function countSubs(event) {
-  const currentNumElement = event.target.parentElement.querySelector(".counter__num");
-  const currentPriceElement = event.target.parentElement.parentElement.querySelector(".item__price");
-  const currentNameElement = event.target.parentElement.parentElement.querySelector(".name__name");
+  const currentNumElement =
+    event.target.parentElement.querySelector(".counter__num");
+  const currentPriceElement =
+    event.target.parentElement.parentElement.querySelector(".item__price");
+  const currentNameElement =
+    event.target.parentElement.parentElement.querySelector(".name__name");
   let constItemPrice = currentPriceElement.dataset.price;
-  let currentItemPrice = parseFloat(currentPriceElement.innerHTML.split("£")[1]);
+  let currentItemPrice = parseFloat(
+    currentPriceElement.innerHTML.split("£")[1]
+  );
   let currentNumDigit = parseInt(currentNumElement.innerHTML);
   if (currentNumDigit != 1) {
     currentNumDigit -= 1;
@@ -158,7 +170,8 @@ function addToCart() {
       price.classList.add("item__price");
       let dataPrice = itemPrice.split("£")[1];
       price.setAttribute("data-price", dataPrice);
-      price.innerHTML = "£" + (parseFloat(itemPrice.split("£")[1]) * itemCount).toPrecision(5);
+      price.innerHTML =
+        "£" + (parseFloat(itemPrice.split("£")[1]) * itemCount).toPrecision(5);
 
       const itemDelete = document.createElement("button");
       itemDelete.classList.add("item__delete");
@@ -178,8 +191,8 @@ function changeCountInLocal(name, newCount) {
   let localData = JSON.parse(localStorage.getItem("itemsList")) || [];
   if (localData.length !== 0) {
     localData.forEach(element => {
-        let elementName = element.name;
-        if (elementName === name) element.count = newCount; 
+      let elementName = element.name;
+      if (elementName === name) element.count = newCount;
     });
   }
   localStorage.setItem("itemsList", JSON.stringify(localData));
@@ -188,7 +201,7 @@ function changeCountInLocal(name, newCount) {
 function usePromocode() {
   const promo = saleInput.value.toLowerCase();
   const REAL_PROMO = "sale";
-  const totalPriceElement = document.querySelector(".total__price")
+  const totalPriceElement = document.querySelector(".total__price");
   const totalPriceNumber = totalPriceElement.innerHTML.split("£")[1];
 
   if (promo == "" && totalPriceNumber == "0") return;
@@ -196,6 +209,7 @@ function usePromocode() {
     const newPrice = totalPriceNumber - totalPriceNumber * 0.5;
     totalPriceElement.innerHTML = "£" + newPrice;
   }
-  promo === REAL_PROMO ? alert("Success! Your sale is 50%") : alert("Wrong promocode!");
-  
+  promo === REAL_PROMO
+    ? alert("Success! Your sale is 50%")
+    : alert("Wrong promocode!");
 }
