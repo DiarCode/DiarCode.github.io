@@ -6,6 +6,10 @@ const navOpen = document.querySelector(".navbar__open");
 //Add to cart
 const toCartBtn = document.querySelector(".add__tocart");
 
+//Check if item is already in cart
+isExist();
+
+
 //Event Listeners
 navOpen.addEventListener("click", show);
 navClose.addEventListener("click", close);
@@ -31,8 +35,7 @@ function addToCart() {
     count: 1,
   };
 
-  let itemsData = JSON.parse(localStorage.getItem("itemsList"));
-  if (itemsData === null) itemsData = [];
+  const itemsData = JSON.parse(localStorage.getItem("itemsList")) || [];
 
   let isExists = false;
   itemsData.forEach(item => {
@@ -40,14 +43,33 @@ function addToCart() {
       isExists = true;
     }
   });
+
   isExists
     ? alert("This item is already in the cart")
     : localStorage.setItem(
         "itemsList",
-        JSON.stringify([...itemsData, newItemData])
-      );
+        JSON.stringify([...itemsData, newItemData]));
 
   toCartBtn.classList.add("add__tocartPressed");
   toCartBtn.disabled = true;
   toCartBtn.innerHTML = "Added";
+}
+
+function isExist() {
+  const itemName = document.querySelector(".detail__title").innerHTML;
+  const itemsData = JSON.parse(localStorage.getItem("itemsList")) || [];
+
+  let isExists = false;
+  itemsData.forEach(item => {
+    if (item.name === itemName) {
+      isExists = true;
+    }
+  });
+
+  if(isExists){
+    toCartBtn.classList.add("add__tocartPressed");
+    toCartBtn.disabled = true;
+    toCartBtn.innerHTML = "Added";
+  }
+
 }
