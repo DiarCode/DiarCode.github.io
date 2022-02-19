@@ -96,6 +96,7 @@ body{
 }
 
 .carousel{
+	display: block;
 	max-width:80rem;
 	margin: 0 auto;
 	margin-bottom: 3rem;
@@ -108,13 +109,23 @@ body{
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff69b4' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
-.home__image img{
+.carousel__image img{
 	width: 100%;
 	height: auto;
 }
 
-.home__video video{
+.carousel__video video{
 	max-width:100%;
+}
+
+.home__image{
+	display: none;
+	margin-bottom: 3rem;
+}
+
+.home__image img{
+	width: 100%;
+	height: auto;
 }
 
 .content{
@@ -392,5 +403,13 @@ footer{
 
 	.navbar__open{
 		display: block;
+	}
+
+	.home__image{
+		display: block;
+	}
+
+	.carousel{
+		display: none;
 	}
 }
