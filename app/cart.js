@@ -1,8 +1,3 @@
-//Navbar
-const navbar = document.querySelector(".navbar__nav");
-const navClose = document.querySelector(".navbar__close");
-const navOpen = document.querySelector(".navbar__open");
-
 //Add to cart
 const cart = document.querySelector(".cart__items");
 addToCart();
@@ -13,13 +8,14 @@ const cartCountAdd = document.querySelectorAll(".counter__plus");
 const cartCountSubstract = document.querySelectorAll(".counter__minus");
 const cartDelete = document.querySelectorAll(".item__delete");
 
+//Calculate total price
+calculateTotal();
+
 //Promocode
 const saleInput = document.querySelector(".promo__input");
 const saleBtn = document.querySelector(".promo__submit");
 
 //Event Listeners
-navOpen.addEventListener("click", show);
-navClose.addEventListener("click", close);
 cartCountAdd.forEach(element => {
   element.addEventListener("click", countAdd);
 });
@@ -32,14 +28,26 @@ cartDelete.forEach(element => {
 saleBtn.addEventListener("click", usePromocode);
 
 //Functions
-calculateTotal(); //Calculate total current price
+jQuery(document).ready(() => {
+  handleNavbar();
+});
 
-function show() {
-  navbar.style.display = "flex";
-}
+function handleNavbar(){
+  const navbar = $(".navbar__nav");
+  const navClose = $(".navbar__close");
+  const navOpen = $(".navbar__open");
 
-function close() {
-  navbar.style.display = "none";
+  navOpen.click(() => {
+    navbar.css({
+      display: "flex"
+    });
+  });
+
+  navClose.click(() => {
+    navbar.css({
+      display: "none"
+    });
+  })
 }
 
 function countAdd(event) {

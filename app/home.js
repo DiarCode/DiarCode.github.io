@@ -1,25 +1,43 @@
-//Navbar
-const navbar = document.querySelector(".navbar__nav");
-const navClose = document.querySelector(".navbar__close");
-const navOpen = document.querySelector(".navbar__open");
-const btnCol = document.querySelectorAll(".btn");
-
 //Sorting
 const newItems = document.getElementsByName("new");
 const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
+const btnCol = document.querySelectorAll(".btn");
 
 //Setting local Storage
 setLocalstorage();
 
+//Switch Home Content
+
+
 //Event Listeners
-navOpen.addEventListener("click", show);
-navClose.addEventListener("click", close);
 btnCol.forEach(element => {
   element.addEventListener("click", pressed);
 });
 
 //Functions
+jQuery(document).ready(() => {
+  handleNavbar();
+});
+
+function handleNavbar(){
+  const navbar = $(".navbar__nav");
+  const navClose = $(".navbar__close");
+  const navOpen = $(".navbar__open");
+
+  navOpen.click(() => {
+    navbar.css({
+      display: "flex"
+    });
+  });
+
+  navClose.click(() => {
+    navbar.css({
+      display: "none"
+    });
+  })
+}
+
 function show() {
   navbar.style.display = "flex";
 }
@@ -79,3 +97,5 @@ function setLocalstorage() {
   localStorage.getItem("itemsList") ||
     localStorage.setItem("itemsList", JSON.stringify([]));
 }
+
+

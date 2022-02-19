@@ -1,8 +1,3 @@
-//Navbar
-const navbar = document.querySelector(".navbar__nav");
-const navClose = document.querySelector(".navbar__close");
-const navOpen = document.querySelector(".navbar__open");
-
 //Search
 const searchInput = document.getElementById("searchInput");
 const searchResultTitle = document.querySelector(".result__title");
@@ -15,17 +10,29 @@ const searchItems = document
 const items = document.querySelectorAll(".goods__item");
 
 //Event Listeners
-navOpen.addEventListener("click", show);
-navClose.addEventListener("click", close);
 searchInput.addEventListener("input", findItem);
 
 //Functions
-function show() {
-  navbar.style.display = "flex";
-}
+jQuery(document).ready(() => {
+  handleNavbar();
+});
 
-function close() {
-  navbar.style.display = "none";
+function handleNavbar() {
+  const navbar = $(".navbar__nav");
+  const navClose = $(".navbar__close");
+  const navOpen = $(".navbar__open");
+
+  navOpen.click(() => {
+    navbar.css({
+      display: "flex",
+    });
+  });
+
+  navClose.click(() => {
+    navbar.css({
+      display: "none",
+    });
+  });
 }
 
 function findItem() {

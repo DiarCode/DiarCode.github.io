@@ -1,9 +1,3 @@
-//Variables
-//Navbar
-const navbar = document.querySelector(".navbar__nav");
-const navClose = document.querySelector(".navbar__close");
-const navOpen = document.querySelector(".navbar__open");
-
 //Sorting
 const btnCol = document.querySelectorAll(".btn");
 const newItems = document.getElementsByName("new");
@@ -17,20 +11,32 @@ const allItems = document
   .querySelectorAll(".goods__item");
 
 //Event Listeners
-navOpen.addEventListener("click", show);
-navClose.addEventListener("click", close);
 btnCol.forEach(element => {
   element.addEventListener("click", pressed);
 });
 brandSelector.addEventListener("change", sortByBrand);
 
 //Functions
-function show() {
-  navbar.style.display = "flex";
-}
+jQuery(document).ready(() => {
+  handleNavbar();
+});
 
-function close() {
-  navbar.style.display = "none";
+function handleNavbar(){
+  const navbar = $(".navbar__nav");
+  const navClose = $(".navbar__close");
+  const navOpen = $(".navbar__open");
+
+  navOpen.click(() => {
+    navbar.css({
+      display: "flex"
+    });
+  });
+
+  navClose.click(() => {
+    navbar.css({
+      display: "none"
+    });
+  })
 }
 
 function pressed(event) {
