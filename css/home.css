@@ -49,11 +49,21 @@ body{
   	flex-direction: column;
  	min-height: 100vh;
 }
-.navbarr{
+/* .navbarr{
 	width: 100%;
 	padding: 2rem 3rem;
 	background-color: #fff;
-}
+} */
+.navbarr{
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	padding: 2rem 3rem;
+	background-color: #fff;
+	border-bottom: 1px solid #000;
+} 
+
 
 .navbarcontainer{
 	display: flex;
@@ -99,6 +109,7 @@ body{
 	display: block;
 	max-width:80rem;
 	margin: 0 auto;
+	margin-top: 5.5rem;
 	margin-bottom: 3rem;
 }
 .carousel-control-prev-icon {
@@ -120,6 +131,7 @@ body{
 
 .home__image{
 	display: none;
+	margin-top: 2.5rem;
 	margin-bottom: 3rem;
 }
 
