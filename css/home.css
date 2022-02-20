@@ -56,7 +56,7 @@ body{
 } */
 .navbarr{
 	position: fixed;
-	z-index: 100;
+	z-index: 400;
 	top: 0;
 	width: 100%;
 	padding: 2rem 3rem;
@@ -337,6 +337,28 @@ footer{
 	transition: all 0.3s ease;
 }
 
+.scroll__btn{
+	display: none;
+	position: absolute;
+	z-index: 300;
+	right: 4rem;
+	bottom: 2rem;
+}
+
+.scroll__icon{
+	padding:1rem;
+	border-radius: 1rem;
+	background: #ffb0c95b;
+}
+
+.scroll__icon img{
+	width: 100%;
+	height: auto;
+	max-width:2rem;
+}
+
+
+
 @media (max-width:910px) {
 	.emailform__container{
 		padding: 0 2rem;
@@ -423,5 +445,10 @@ footer{
 
 	.carousel{
 		display: none;
+	}
+
+	.scroll__btn{
+		right: 1rem;
+		bottom: 2rem;
 	}
 }

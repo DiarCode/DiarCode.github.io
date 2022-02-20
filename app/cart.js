@@ -28,69 +28,87 @@ cartDelete.forEach(element => {
 saleBtn.addEventListener("click", usePromocode);
 
 //Functions
-jQuery(document).ready(() => {
+$(document).ready(() => {
+  handleWindowScroll()
   handleNavbar();
+  scrollUp();
 });
 
-function handleNavbar(){
+function handleNavbar() {
   const navbar = $(".navbar__nav");
   const navClose = $(".navbar__close");
   const navOpen = $(".navbar__open");
 
   navOpen.click(() => {
     navbar.css({
-      display: "flex"
+      display: "flex",
     });
   });
 
   navClose.click(() => {
     navbar.css({
-      display: "none"
+      display: "none",
     });
-  })
+  });
+}
+
+function handleWindowScroll() {
+  $("body").scroll(function () {
+    $("body").scrollTop() > 100
+      ? $(".scroll__btn").fadeIn()
+      : $(".scroll__btn").fadeOut()
+  });
+  
+}
+
+function scrollUp() {
+  const scrollBtn = $(".scroll__icon");
+
+  scrollBtn.click(() => {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
 }
 
 function countAdd(event) {
-  const currentNumElement =
-    event.target.parentElement.querySelector(".counter__num");
-  const currentPriceElement =
-    event.target.parentElement.parentElement.querySelector(".item__price");
-  const currentNameElement =
-    event.target.parentElement.parentElement.querySelector(".name__name");
-  let constItemPrice = currentPriceElement.dataset.price;
+  const counterParent = event.target.parentElement;
+  const itemParent = counterParent.parentElement;
+  const currentNumElement = counterParent.querySelector(".counter__num");
+  const currentPriceElement = itemParent.querySelector(".item__price");
+  const currentNameElement = itemParent.querySelector(".name__name");
+  const constItemPrice = currentPriceElement.dataset.price;
   let currentNumDigit = parseInt(currentNumElement.innerHTML);
+
   if (currentNumDigit != 10) {
     currentNumDigit += 1;
     currentNumElement.innerHTML = currentNumDigit;
     let newPrice = currentNumDigit * constItemPrice;
-    if (newPrice < 100) {
+    if (newPrice < 100)
       currentPriceElement.innerHTML = "£" + newPrice.toPrecision(4);
-    } else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
+    else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
   } else alert("You have reached maximum count of this product!");
+
   calculateTotal();
   changeCountInLocal(currentNameElement.innerHTML, currentNumDigit);
 }
 
 function countSubs(event) {
-  const currentNumElement =
-    event.target.parentElement.querySelector(".counter__num");
-  const currentPriceElement =
-    event.target.parentElement.parentElement.querySelector(".item__price");
-  const currentNameElement =
-    event.target.parentElement.parentElement.querySelector(".name__name");
-  let constItemPrice = currentPriceElement.dataset.price;
-  let currentItemPrice = parseFloat(
-    currentPriceElement.innerHTML.split("£")[1]
-  );
+  const counterParent = event.target.parentElement;
+  const itemParent = counterParent.parentElement;
+  const currentNumElement = counterParent.querySelector(".counter__num");
+  const currentPriceElement = itemParent.querySelector(".item__price");
+  const currentNameElement = itemParent.querySelector(".name__name");
+  const constItemPrice = currentPriceElement.dataset.price;
   let currentNumDigit = parseInt(currentNumElement.innerHTML);
+
   if (currentNumDigit != 1) {
     currentNumDigit -= 1;
     let newPrice = currentNumDigit * constItemPrice;
     currentNumElement.innerHTML = currentNumDigit;
-    if (newPrice < 100) {
+    if (newPrice < 100)
       currentPriceElement.innerHTML = "£" + newPrice.toPrecision(4);
-    } else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
+    else currentPriceElement.innerHTML = "£" + newPrice.toPrecision(5);
   } else alert("You have reached minimun count of this product!");
+
   calculateTotal();
   changeCountInLocal(currentNameElement.innerHTML, currentNumDigit);
 }
@@ -103,8 +121,6 @@ function removeFromCart(event) {
   currentItem.remove();
 
   const itemName = itemDetails.querySelector(".name__name").innerHTML;
-  const itemBrand = itemDetails.querySelector(".name__brand").innerHTML;
-  const itemPrice = itemDetails.querySelector(".item__price").dataset.price;
 
   let localData = JSON.parse(localStorage.getItem("itemsList"));
   localData = localData.filter(item => item.name !== itemName);
@@ -129,7 +145,8 @@ function calculateTotal() {
 }
 
 function addToCart() {
-  let itemData = JSON.parse(localStorage.getItem("itemsList"));
+  const itemData = JSON.parse(localStorage.getItem("itemsList"));
+
   itemData.forEach(item => {
     if (item !== null) {
       let itemBrand = item.brand;
@@ -196,7 +213,8 @@ function addToCart() {
 }
 
 function changeCountInLocal(name, newCount) {
-  let localData = JSON.parse(localStorage.getItem("itemsList")) || [];
+  const localData = JSON.parse(localStorage.getItem("itemsList")) || [];
+
   if (localData.length !== 0) {
     localData.forEach(element => {
       let elementName = element.name;
@@ -208,16 +226,16 @@ function changeCountInLocal(name, newCount) {
 
 function usePromocode() {
   const promo = saleInput.value.toLowerCase();
-  const REAL_PROMO = "sale";
+  const REAL_PROMO = ["sale", "aitu", "promo"];
   const totalPriceElement = document.querySelector(".total__price");
   const totalPriceNumber = totalPriceElement.innerHTML.split("£")[1];
 
   if (promo == "" && totalPriceNumber == "0") return;
-  if (promo === REAL_PROMO) {
+  if (REAL_PROMO.includes(promo)) {
     const newPrice = totalPriceNumber - totalPriceNumber * 0.5;
     totalPriceElement.innerHTML = "£" + newPrice;
   }
-  promo === REAL_PROMO
+  REAL_PROMO.includes(promo)
     ? alert("Success! Your sale is 50%")
-    : alert("Wrong promocode!");
+    : alert("Wrong promocode... Try again!");
 }

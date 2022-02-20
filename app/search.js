@@ -13,8 +13,10 @@ const items = document.querySelectorAll(".goods__item");
 searchInput.addEventListener("input", findItem);
 
 //Functions
-jQuery(document).ready(() => {
+$(document).ready(() => {
+  handleWindowScroll()
   handleNavbar();
+  scrollUp();
 });
 
 function handleNavbar() {
@@ -33,6 +35,32 @@ function handleNavbar() {
       display: "none",
     });
   });
+}
+
+function handleWindowScroll() {
+  $("body").scroll(function () {
+    $("body").scrollTop() > 100
+      ? $(".scroll__btn").fadeIn()
+      : $(".scroll__btn").fadeOut()
+  });
+  
+}
+
+function scrollUp() {
+  const scrollBtn = $(".scroll__icon");
+
+  scrollBtn.click(() => {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
+}
+
+function handleWindowScroll() {
+  $("body").scroll(function () {
+    $("body").scrollTop() > 100
+      ? $(".scroll__btn").fadeIn()
+      : $(".scroll__btn").fadeOut()
+  });
+  
 }
 
 function findItem() {

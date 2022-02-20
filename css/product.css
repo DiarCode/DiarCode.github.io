@@ -347,9 +347,30 @@ footer{
 .logo{
 	font-family: 'Brawler', serif;
 }
+
 .logo:hover{
 	color:#ebaac0;
 	transition: all 0.3s ease;
+}
+
+.scroll__btn{
+	display: none;
+	position: absolute;
+	z-index: 300;
+	right: 4rem;
+	bottom: 2rem;
+}
+
+.scroll__icon{
+	padding:1rem;
+	border-radius: 1rem;
+	background: #ffb0c95b;
+}
+
+.scroll__icon img{
+	width: 100%;
+	height: auto;
+	max-width:2rem;
 }
 
 @media (max-width: 910px) {
@@ -396,6 +417,11 @@ footer{
 	.descrip__info{
 		line-height: 1.3rem;
 		font-size: 0.9rem;
+	}
+
+	.scroll__btn{
+		right: 1rem;
+		bottom: 2rem;
 	}
 }
 
