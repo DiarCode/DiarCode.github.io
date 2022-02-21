@@ -65,7 +65,7 @@ function handleWindowScroll() {
 
 function findItem() {
   //Filtering product name
-  let inputValue = searchInput.value;
+  const inputValue = searchInput.value;
   if (inputValue != "") {
     searchResultTitle.style.display = "inline";
     searchResult.style.display = "inline";
