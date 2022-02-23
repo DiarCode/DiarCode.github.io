@@ -14,7 +14,7 @@ searchInput.addEventListener("input", findItem);
 
 //Functions
 $(document).ready(() => {
-  handleWindowScroll()
+  handleWindowScroll();
   handleNavbar();
   scrollUp();
 });
@@ -41,9 +41,8 @@ function handleWindowScroll() {
   $("body").scroll(function () {
     $("body").scrollTop() > 100
       ? $(".scroll__btn").fadeIn()
-      : $(".scroll__btn").fadeOut()
+      : $(".scroll__btn").fadeOut();
   });
-  
 }
 
 function scrollUp() {
@@ -52,15 +51,6 @@ function scrollUp() {
   scrollBtn.click(() => {
     $("html, body").animate({ scrollTop: 0 }, 800);
   });
-}
-
-function handleWindowScroll() {
-  $("body").scroll(function () {
-    $("body").scrollTop() > 100
-      ? $(".scroll__btn").fadeIn()
-      : $(".scroll__btn").fadeOut()
-  });
-  
 }
 
 function findItem() {
@@ -77,9 +67,9 @@ function findItem() {
 
   //Filter by product name
   if (inputValue != "") {
-    inputValue = inputValue.toLowerCase();
+    const adjuctedinputValue = inputValue.toLowerCase();
     searchItems.forEach(element => {
-      if (element.innerHTML.search(inputValue) === -1)
+      if (element.innerHTML.search(adjuctedinputValue) === -1)
         element.classList.add("hideItem");
       else element.classList.remove("hideItem");
     });

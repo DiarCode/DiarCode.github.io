@@ -41,15 +41,6 @@ function handleNavbar() {
   });
 }
 
-function handleWindowScroll() {
-  $("body").scroll(function () {
-    $("body").scrollTop() > 100
-      ? $(".scroll__btn").fadeIn()
-      : $(".scroll__btn").fadeOut()
-  });
-  
-}
-
 function scrollUp() {
   const scrollBtn = $(".scroll__icon");
 
@@ -116,14 +107,13 @@ function pressed(event) {
 
 function sortByBrand() {
   const selectedBrand = brandSelector.value;
+
   allItems.forEach(element => {
     const itemBrand = element
       .querySelector(".item__brand")
       .innerHTML.toLowerCase();
-    if (itemBrand !== selectedBrand) {
-      element.classList.add("hideItem");
-    } else {
-      element.classList.remove("hideItem");
-    }
+
+    if (itemBrand !== selectedBrand) element.classList.add("hideItem");
+    else element.classList.remove("hideItem");
   });
 }

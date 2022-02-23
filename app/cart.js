@@ -88,7 +88,7 @@ function countAdd(event) {
   } else alert("You have reached maximum count of this product!");
 
   calculateTotal();
-  changeCountInLocal(currentNameElement.innerHTML, currentNumDigit);
+  changeCountInLocalStorage(currentNameElement.innerHTML, currentNumDigit);
 }
 
 function countSubs(event) {
@@ -110,7 +110,7 @@ function countSubs(event) {
   } else alert("You have reached minimun count of this product!");
 
   calculateTotal();
-  changeCountInLocal(currentNameElement.innerHTML, currentNumDigit);
+  changeCountInLocalStorage(currentNameElement.innerHTML, currentNumDigit);
 }
 
 function removeFromCart(event) {
@@ -212,7 +212,7 @@ function addToCart() {
   });
 }
 
-function changeCountInLocal(name, newCount) {
+function changeCountInLocalStorage(name, newCount) {
   const localData = JSON.parse(localStorage.getItem("itemsList")) || [];
 
   if (localData.length !== 0) {
