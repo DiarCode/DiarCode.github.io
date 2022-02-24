@@ -9,6 +9,11 @@ const toCartBtn = document.querySelector(".add__tocart");
 //Check if item is already in cart
 isExist();
 
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
 
 //Event Listeners
 navOpen.addEventListener("click", show);
@@ -28,6 +33,8 @@ function addToCart() {
   const itemBrand = document.querySelector(".detail__brand").innerHTML;
   const itemName = document.querySelector(".detail__title").innerHTML;
   const itemPrice = document.querySelector(".detail__price").innerHTML;
+  const cartIndicatorNumDigit = parseInt(cartIndicatorNum.innerHTML);
+
   const newItemData = {
     brand: itemBrand,
     name: itemName,
@@ -53,6 +60,9 @@ function addToCart() {
   toCartBtn.classList.add("add__tocartPressed");
   toCartBtn.disabled = true;
   toCartBtn.innerHTML = "Added";
+  
+  setCartIndicator()
+  cartIndicatorNum.innerHTML = cartIndicatorNumDigit + 1;
 }
 
 function isExist() {
@@ -82,6 +92,6 @@ function setCartIndicator() {
   localDataSize
     ? cartIndicatorElement.classList.remove("indicator__hide")
     : cartIndicatorElement.classList.add("indicator__hide");
-}
 
+}
 

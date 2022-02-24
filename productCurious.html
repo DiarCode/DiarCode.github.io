@@ -1,118 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Brawler&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/indicator.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brawler&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/indicator.css" />
     <title>ELIXIR | Curious</title>
-    <link rel="shortcut icon" type="image/png" href="src/img/logo.png"/>
-</head>
-<body>
+    <link rel="shortcut icon" type="image/png" href="src/img/logo.png" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="navbarr">
-            <div class="navbar__container wrapper__container">
-                <a class="navbar__logo logo" href="index.html">ELIXIR</a>
-                <div class="navbar__open nav__icons"><img src="src/img/burger.png" alt="burger"></div>
-                <div class="navbar__nav">
-                    <a href="index.html" class="nav__home">Home</a>
-                    <a href="shop.html" class="nav__shop">Shop</a>
-                    <a href="about.html" class="nav__about">About</a>
-                    <a href="search.html" class="nav__search">Search</a>
-                    <a href="cart.html" class="nav__cart">Cart</a>
-                    <div class="navbar__close nav__icons"><img src="src/img/close.png" alt="close"></div>
-                </div> 
-            </div>          
-        </div>
-        <div class="cart">
-            <div class="cart__container wrapper__container">
-                <div class="cart__img"><img src="src/img/curious.png" alt="PARFUME" class="itemImg"></div>
-                <div class="cart__detail">
-                    <div class="detail__brand">Britney Spears</div>
-                    <div class="detail__title">Curious</div>
-                    <div class="detail__measure">
-                        <button class="measure pressed">50ml</button>
-                        <button class="measure">100ml</button>
-                        <button class="measure">150ml</button>
-                    </div>
-                    <div class="detail__price">£30.99</div>
-                    <div class="detail__add">
+      <div class="navbarr">
+        <div class="navbar__container wrapper__container">
+          <a class="navbar__logo logo" href="index.html">ELIXIR</a>
+          <div class="navbar__open nav__icons">
+            <img src="src/img/burger.png" alt="burger" />
+          </div>
+          <div class="navbar__nav">
+            <a href="index.html" class="nav__home">Home</a>
+            <a href="shop.html" class="nav__shop">Shop</a>
+            <a href="about.html" class="nav__about">About</a>
+            <a href="search.html" class="nav__search">Search</a>
+            <a href="cart.html" class="nav__cart">Cart</a>
 
-                    <button class="add__tocart">Add to cart</button>
-                    </div>
-                </div>
-            </div>  
-            <div class="descrip wrapper__container">
-                <div class="descrip__title">Description:</div>
-                <div class="descrip__info">Discover My Way Intense, Giorgio Armani's new feminine fragrance. An amplified bright floral bouquet on an addictive woody trail, encapsulating intense experiences and authentic encounters around the world. Live your way, intensely. My Way intense is an invitation to a journey of self-discovery, meaningful encounters and amplified experiences.</div>
+            <!– Cart Indicator –>
+            <div class="cart__indicator indicator__hide">
+              <div class="indicator__num"></div>
             </div>
+            <div class="navbar__close nav__icons">
+              <img src="src/img/close.png" alt="close" />
+            </div>
+          </div>
         </div>
-        <div class="recomended">
-            <div class="recomended__title titles">Personaly Recomended</div>
-            <div class="goods">
-                <div class="goods__container wrapper__container">
-                    <a href="productCodeForWomen.html" class="goods__item">
-                    <div class="item__img">
-                        <img src="src/img/code.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Armani</div>
-                    <div class="item__name">Code For Women</div>
-                    <div class="item__info">Eau de Parfum for her</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£46.99</div>
-                    </a>
-                    <a href="productSauage.html" class="goods__item">
-                    <div class="item__img">
-                        <img src="src/img/sauage.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Dior</div>
-                    <div class="item__name">Sauvage</div>
-                    <div class="item__info">Eau de Parfum for him</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£65.99</div>
-                    </a>
-                    <a href="productBlackOpium.html" class="goods__item">
-                    <div class="item__img">
-                        <img src="src/img/blackOpium.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Yves Saint Laurent</div>
-                    <div class="item__name">Black Opium</div>
-                    <div class="item__info">Eau de Parfum for her</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£53.99</div>
-                    </a> 
-                </div>
+      </div>
+      <div class="cart">
+        <div class="cart__container wrapper__container">
+          <div class="cart__img">
+            <img src="src/img/curious.png" alt="PARFUME" class="itemImg" />
+          </div>
+          <div class="cart__detail">
+            <div class="detail__brand">Britney Spears</div>
+            <div class="detail__title">Curious</div>
+            <div class="detail__measure">
+              <button class="measure pressed">50ml</button>
+              <button class="measure">100ml</button>
+              <button class="measure">150ml</button>
             </div>
+            <div class="detail__price">£30.99</div>
+            <div class="detail__add">
+              <button class="add__tocart">Add to cart</button>
+            </div>
+          </div>
         </div>
-        <!– SLIDER –>
-        <footer class="bg-pink text-dark py-5">
-            <div class="container-xxl">
-                <nav class="row justify-content-center align-items-center">
-                    <a href="#" class="col-2 me-5 text-reset d-flex align-items-center link-dark footer__logo">ELIXIR</a>
-                    <div class="col-4 d-flex align-items-center flex-wrap justify-content-center links">
-                        <a href="#" class="me-3 text-reset align-items-center">About</a>
-                        <a href="#" class="me-3 text-reset align-items-center">Delivery</a>
-                        <a href="#" class="me-3 text-reset align-items-center">Payment</a>
-                        <a href="#" class="text-reset align-items-center">Support</a>
-                    </div>
-                    <div class="col-3 d-flex align-items-center flex-wrap justify-content-center icons">
-                        <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/facebook-instagram.svg" alt="Facebook"></a>
-                        <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/twitter-icon.svg" alt="Twitter"></a>
-                        <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/instagram-icon.svg" alt="Instagram"></a>
-                    </div>
-                </nav>
+        <div class="descrip wrapper__container">
+          <div class="descrip__title">Description:</div>
+          <div class="descrip__info">
+            Discover My Way Intense, Giorgio Armani's new feminine fragrance. An
+            amplified bright floral bouquet on an addictive woody trail,
+            encapsulating intense experiences and authentic encounters around
+            the world. Live your way, intensely. My Way intense is an invitation
+            to a journey of self-discovery, meaningful encounters and amplified
+            experiences.
+          </div>
+        </div>
+      </div>
+      <div class="recomended">
+        <div class="recomended__title titles">Personaly Recomended</div>
+        <div class="goods">
+          <div class="goods__container wrapper__container">
+            <a href="productCodeForWomen.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/code.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Armani</div>
+              <div class="item__name">Code For Women</div>
+              <div class="item__info">Eau de Parfum for her</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£46.99</div>
+            </a>
+            <a href="productSauage.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/sauage.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Dior</div>
+              <div class="item__name">Sauvage</div>
+              <div class="item__info">Eau de Parfum for him</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£65.99</div>
+            </a>
+            <a href="productBlackOpium.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/blackOpium.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Yves Saint Laurent</div>
+              <div class="item__name">Black Opium</div>
+              <div class="item__info">Eau de Parfum for her</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£53.99</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!– SLIDER –>
+      <footer class="bg-pink text-dark py-5">
+        <div class="container-xxl">
+          <nav class="row justify-content-center align-items-center">
+            <a
+              href="#"
+              class="col-2 me-5 text-reset d-flex align-items-center link-dark footer__logo"
+              >ELIXIR</a
+            >
+            <div
+              class="col-4 d-flex align-items-center flex-wrap justify-content-center links"
+            >
+              <a href="#" class="me-3 text-reset align-items-center">About</a>
+              <a href="#" class="me-3 text-reset align-items-center"
+                >Delivery</a
+              >
+              <a href="#" class="me-3 text-reset align-items-center">Payment</a>
+              <a href="#" class="text-reset align-items-center">Support</a>
             </div>
-        </footer>
+            <div
+              class="col-3 d-flex align-items-center flex-wrap justify-content-center icons"
+            >
+              <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/facebook-instagram.svg" alt="Facebook"
+              /></a>
+              <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/twitter-icon.svg" alt="Twitter"
+              /></a>
+              <a href="#" class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/instagram-icon.svg" alt="Instagram"
+              /></a>
+            </div>
+          </nav>
+        </div>
+      </footer>
     </div>
     <script src="app/product.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

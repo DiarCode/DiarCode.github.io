@@ -12,6 +12,11 @@ const items = document.querySelectorAll(".goods__item");
 //Event Listeners
 searchInput.addEventListener("input", findItem);
 
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
 //Functions
 $(document).ready(() => {
   handleWindowScroll();

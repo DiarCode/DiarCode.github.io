@@ -10,6 +10,11 @@ const allItems = document
   .querySelector(".goods")
   .querySelectorAll(".goods__item");
 
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
 //Event Listeners
 btnCol.forEach(element => {
   element.addEventListener("click", pressed);

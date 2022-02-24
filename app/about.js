@@ -1,4 +1,9 @@
-//Navbar
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
+//Functions
 $(document).ready(() => {
   handleWindowScroll()
   handleNavbar();

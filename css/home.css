@@ -108,7 +108,7 @@ body{
 	display: block;
 	max-width:80rem;
 	margin: 0 auto;
-	margin-top: 5.5rem;
+	margin-top: 5.6rem;
 	margin-bottom: 3rem;
 }
 .carousel-control-prev-icon {
@@ -420,11 +420,18 @@ footer{
 		display: none;
 	}
 
-	.navbar__nav a{
+	.navbar__nav a:not(:last-of-type){
 		font-size: 1.8rem;
 		margin-bottom: 3rem;
 		text-align: center;
-		margin-right: 0;
+		margin-right: 0rem;
+	}
+
+	.navbar__nav a:last-of-type{
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
+		text-align: center;
+		margin-right: 0rem;
 	}
 
 	.navbar__close{

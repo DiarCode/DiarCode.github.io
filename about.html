@@ -1,139 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Brawler&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/indicator.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brawler&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/indicator.css" />
     <title>ELIXIR | About</title>
-    <link rel="shortcut icon" type="image/png" href="src/img/logo.png"/>
-</head>
-<body>
+    <link rel="shortcut icon" type="image/png" href="src/img/logo.png" />
+  </head>
+  <body>
     <div class="wrapper">
+      <!– Navbar –>
+      <div class="navbarr">
+        <div class="navbar__container wrapper__container">
+          <a class="navbar__logo logo" href="index.html">ELIXIR</a>
+          <div class="navbar__open nav__icons">
+            <img src="src/img/burger.png" alt="burger" />
+          </div>
+          <div class="navbar__nav">
+            <a href="index.html" class="nav__home">Home</a>
+            <a href="shop.html" class="nav__shop">Shop</a>
+            <a href="about.html" class="nav__about">About</a>
+            <a href="search.html" class="nav__search">Search</a>
+            <a href="cart.html" class="nav__cart">Cart</a>
 
-        <!– Navbar –>
-        <div class="navbarr">
-            <div class="navbarcontainer wrapper__container">
-              <a class="navbar__logo logo" href="index.html">ELIXIR</a>
-              <div class="navbar__open nav__icons">
-                <img src="src/img/burger.png" alt="burger" />
+            <!– Cart Indicator –>
+            <div class="cart__indicator indicator__hide">
+              <div class="indicator__num"></div>
+            </div>
+            <div class="navbar__close nav__icons">
+              <img src="src/img/close.png" alt="close" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!– About Content –>
+      <div class="about">
+        <div class="about__container wrapper__container">
+          <div class="about__aboutus">
+            <div class="aboutus">
+              <div class="aboutus__title title">About us</div>
+              <div class="aboutus__info info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                libero quam, imperdiet eu turpis in, posuere fermentum purus.
+                Donec sit amet finibus velit. Phasellus fermentum, metus ac
+                consectetur pretium, purus mi egestas urna, sed facilisis neque
+                turpis a nunc.
               </div>
-              <div class="navbar__nav">
-                <a href="index.html" class="nav__home">Home</a>
-                <a href="shop.html" class="nav__shop">Shop</a>
-                <a href="about.html" class="nav__about">About</a>
-                <a href="search.html" class="nav__search">Search</a>
-                <a href="cart.html" class="nav__cart">Cart</a>
-    
-                <!– Cart Indicator –>
-                <div class="cart__indicator indicator__hide">
-                  <div class="indicator__num"></div>
-                </div>
-                <div class="navbar__close nav__icons">
-                  <img src="src/img/close.png" alt="close" />
-                </div>
+            </div>
+            <div class="aboutus__img">
+              <img src="src/img/aboutus.jpeg" alt="ABOUTUS" />
+            </div>
+          </div>
+          <div class="about__guaranty">
+            <div class="guaranty__img">
+              <img src="src/img/guaranty.jpg" alt="GUARANTY" />
+            </div>
+            <div class="guaranty">
+              <div class="guaranty__title title">Guaranty</div>
+              <div class="guaranty__info info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                libero quam, imperdiet eu turpis in, posuere fermentum purus.
+                Donec sit amet finibus velit. Phasellus fermentum, metus ac
+                consectetur pretium, purus mi egestas urna, sed facilisis neque
+                turpis a nunc.
               </div>
             </div>
           </div>
-
-        <!– About Content –>
-        <div class="about">
-            <div class="about__container wrapper__container">
-                <div class="about__aboutus">
-                    <div class="aboutus">
-                        <div class="aboutus__title title">About us</div>
-                        <div class="aboutus__info info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero quam, imperdiet eu turpis in, posuere fermentum purus. Donec sit amet finibus velit. Phasellus fermentum, metus ac consectetur pretium, purus mi egestas urna, sed facilisis neque turpis a nunc. </div>
-                    </div>
-                    <div class="aboutus__img"><img src="src/img/aboutus.jpeg" alt="ABOUTUS"></div>
-                </div>
-                <div class="about__guaranty">
-                    <div class="guaranty__img"><img src="src/img/guaranty.jpg" alt="GUARANTY"></div>
-                    <div class="guaranty">
-                        <div class="guaranty__title title">Guaranty</div>
-                        <div class="guaranty__info info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero quam, imperdiet eu turpis in, posuere fermentum purus. Donec sit amet finibus velit. Phasellus fermentum, metus ac consectetur pretium, purus mi egestas urna, sed facilisis neque turpis a nunc. </div>
-                    </div>
-                </div>
-            </div>
         </div>
+      </div>
 
-        <!– Recomended –>
-        <div class="recomended">
-            <div class="recomended__title titles">Personaly Recomended</div>
-            <div class="goods">
-                <div class="goods__container wrapper__container">
-                    <a href="productCodeForWomen.html" class="goods__item">
-                    <div class="item__img">
-                        <img src="src/img/code.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Armani</div>
-                    <div class="item__name">Code For Women</div>
-                    <div class="item__info">Eau de Parfum for her</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£46.99</div>
-                    </a>
-                    <a href="productSauage.html" class="goods__item">
-                    <div class="item__img">
-                        <img src="src/img/sauage.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Dior</div>
-                    <div class="item__name">Sauvage</div>
-                    <div class="item__info">Eau de Parfum for him</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£65.99</div>
-                    </a>
-                    <a href="productBlackOpium.html" class="goods__item" >
-                    <div class="item__img">
-                        <img src="src/img/blackOpium.png" alt="parfume">
-                    </div>
-                    <div class="item__brand">Yves Saint Laurent</div>
-                    <div class="item__name">Black Opium</div>
-                    <div class="item__info">Eau de Parfum for her</div>
-                    <div class="item__measure">50ml</div>
-                    <div class="item__price">£53.99</div>
-                    </a> 
-                </div>
-            </div>
+      <!– Recomended –>
+      <div class="recomended">
+        <div class="recomended__title titles">Personaly Recomended</div>
+        <div class="goods">
+          <div class="goods__container wrapper__container">
+            <a href="productCodeForWomen.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/code.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Armani</div>
+              <div class="item__name">Code For Women</div>
+              <div class="item__info">Eau de Parfum for her</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£46.99</div>
+            </a>
+            <a href="productSauage.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/sauage.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Dior</div>
+              <div class="item__name">Sauvage</div>
+              <div class="item__info">Eau de Parfum for him</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£65.99</div>
+            </a>
+            <a href="productBlackOpium.html" class="goods__item">
+              <div class="item__img">
+                <img src="src/img/blackOpium.png" alt="parfume" />
+              </div>
+              <div class="item__brand">Yves Saint Laurent</div>
+              <div class="item__name">Black Opium</div>
+              <div class="item__info">Eau de Parfum for her</div>
+              <div class="item__measure">50ml</div>
+              <div class="item__price">£53.99</div>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <!– Footer –>
-        <footer class="bg-pink text-dark py-5">
-            <div class="container-xxl">
-                <nav class="row justify-content-center align-items-center">
-                    <a href="#" class="col-2 me-5 text-reset d-flex align-items-center link-dark footer__logo">ELIXIR</a>
-                    <div class="col-4 d-flex align-items-center flex-wrap justify-content-center links">
-                        <a href="#" class="me-3 text-reset align-items-center">About</a>
-                        <a href="#" class="me-3 text-reset align-items-center">Delivery</a>
-                        <a href="#" class="me-3 text-reset align-items-center">Payment</a>
-                        <a href="#" class="text-reset align-items-center">Support</a>
-                    </div>
-                    <div class="col-3 d-flex align-items-center flex-wrap justify-content-center icons">
-                        <a href="https://www.instagram.com" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/facebook-instagram.svg" alt="Facebook"></a>
-                        <a href="https://twitter.com" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/twitter-icon.svg" alt="Twitter"></a>
-                        <a href="https://www.facebook.com" class="me-4 mb-2 text-reset d-flex align-items-center"><img src="src/img/instagram-icon.svg" alt="Instagram"></a>
-                    </div>
-                </nav>
+      <!– Footer –>
+      <footer class="bg-pink text-dark py-5">
+        <div class="container-xxl">
+          <nav class="row justify-content-center align-items-center">
+            <a
+              href="#"
+              class="col-2 me-5 text-reset d-flex align-items-center link-dark footer__logo"
+              >ELIXIR</a
+            >
+            <div
+              class="col-4 d-flex align-items-center flex-wrap justify-content-center links"
+            >
+              <a href="#" class="me-3 text-reset align-items-center">About</a>
+              <a href="#" class="me-3 text-reset align-items-center"
+                >Delivery</a
+              >
+              <a href="#" class="me-3 text-reset align-items-center">Payment</a>
+              <a href="#" class="text-reset align-items-center">Support</a>
             </div>
-        </footer>
-
-        <!– Scroll Button –>
-        <div class="scroll__btn">
-            <button class="scroll__icon">
-                <img src="./src/img/up-arrow.png" alt="arrow-top">
-            </button>
+            <div
+              class="col-3 d-flex align-items-center flex-wrap justify-content-center icons"
+            >
+              <a
+                href="https://www.instagram.com"
+                class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/facebook-instagram.svg" alt="Facebook"
+              /></a>
+              <a
+                href="https://twitter.com"
+                class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/twitter-icon.svg" alt="Twitter"
+              /></a>
+              <a
+                href="https://www.facebook.com"
+                class="me-4 mb-2 text-reset d-flex align-items-center"
+                ><img src="src/img/instagram-icon.svg" alt="Instagram"
+              /></a>
+            </div>
+          </nav>
         </div>
-        
+      </footer>
+
+      <!– Scroll Button –>
+      <div class="scroll__btn">
+        <button class="scroll__icon">
+          <img src="./src/img/up-arrow.png" alt="arrow-top" />
+        </button>
+      </div>
     </div>
 
     <!– Scripts –>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
     <script src="app/about.js"></script>
-</body>
+  </body>
 </html>

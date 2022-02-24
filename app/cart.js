@@ -11,6 +11,11 @@ const cartDelete = document.querySelectorAll(".item__delete");
 //Calculate total price
 calculateTotal();
 
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
 //Promocode
 const saleInput = document.querySelector(".promo__input");
 const saleBtn = document.querySelector(".promo__submit");
@@ -117,6 +122,7 @@ function removeFromCart(event) {
   const deleteBtn = event.target;
   const itemDetails = deleteBtn.parentElement;
   const currentItem = itemDetails.parentElement;
+  const cartIndicatorNumDigit = parseInt(cartIndicatorNum.innerHTML);
 
   currentItem.remove();
 
@@ -126,6 +132,9 @@ function removeFromCart(event) {
   localData = localData.filter(item => item.name !== itemName);
 
   localStorage.setItem("itemsList", JSON.stringify(localData));
+
+  cartIndicatorNum.innerHTML = cartIndicatorNumDigit - 1;
+
   calculateTotal();
 }
 
