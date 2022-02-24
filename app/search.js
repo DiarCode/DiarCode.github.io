@@ -68,6 +68,7 @@ function findItem() {
   //Filter by product name
   if (inputValue != "") {
     const adjuctedinputValue = inputValue.toLowerCase();
+    
     searchItems.forEach(element => {
       if (element.innerHTML.search(adjuctedinputValue) === -1)
         element.classList.add("hideItem");
@@ -78,4 +79,14 @@ function findItem() {
       element.classList.remove("hideItem");
     });
   }
+}
+
+function setCartIndicator() {
+  const localData = JSON.parse(localStorage.getItem("itemsList"));
+  const localDataSize = localData.length;
+
+  cartIndicatorNum.innerHTML = localDataSize;
+  localDataSize
+    ? cartIndicatorElement.classList.remove("indicator__hide")
+    : cartIndicatorElement.classList.add("indicator__hide");
 }

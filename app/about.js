@@ -39,3 +39,13 @@ function scrollUp() {
     $("html, body").animate({ scrollTop: 0 }, 800);
   });
 }
+
+function setCartIndicator() {
+  const localData = JSON.parse(localStorage.getItem("itemsList"));
+  const localDataSize = localData.length;
+
+  cartIndicatorNum.innerHTML = localDataSize;
+  localDataSize
+    ? cartIndicatorElement.classList.remove("indicator__hide")
+    : cartIndicatorElement.classList.add("indicator__hide");
+}

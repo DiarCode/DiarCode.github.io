@@ -239,3 +239,13 @@ function usePromocode() {
     ? alert("Success! Your sale is 50%")
     : alert("Wrong promocode... Try again!");
 }
+
+function setCartIndicator() {
+  const localData = JSON.parse(localStorage.getItem("itemsList"));
+  const localDataSize = localData.length;
+
+  cartIndicatorNum.innerHTML = localDataSize;
+  localDataSize
+    ? cartIndicatorElement.classList.remove("indicator__hide")
+    : cartIndicatorElement.classList.add("indicator__hide");
+}

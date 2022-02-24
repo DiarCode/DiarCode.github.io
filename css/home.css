@@ -64,12 +64,12 @@ body{
 	border-bottom: 1px solid #000;
 } 
 
-
 .navbarcontainer{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
+	font-size: 1.5rem;
 }
 
 .navbar__nav{
@@ -81,8 +81,7 @@ body{
 	margin-right: 3rem;
 }
 
-.navbar__nav a{
-	font-size: 1.5rem;
+.navbar__nav a:not(:last-of-type){
 	margin-right: 3rem;
 }
 .navbar__nav a:hover{

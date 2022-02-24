@@ -4,10 +4,13 @@ const specialItems = document.getElementsByName("special");
 const popularItems = document.getElementsByName("popular");
 const btnCol = document.querySelectorAll(".btn");
 
+//Setting Cart indicator
+const cartIndicatorElement = document.querySelector(".cart__indicator");
+const cartIndicatorNum = document.querySelector(".indicator__num");
+setCartIndicator();
+
 //Setting local Storage
 setLocalstorage();
-
-//Switch Home Content
 
 //Event Listeners
 btnCol.forEach(element => {
@@ -16,7 +19,7 @@ btnCol.forEach(element => {
 
 //Functions
 $(document).ready(() => {
-  handleWindowScroll()
+  handleWindowScroll();
   handleNavbar();
   scrollUp();
 });
@@ -43,9 +46,8 @@ function handleWindowScroll() {
   $("body").scroll(function () {
     $("body").scrollTop() > 100
       ? $(".scroll__btn").fadeIn()
-      : $(".scroll__btn").fadeOut()
+      : $(".scroll__btn").fadeOut();
   });
-  
 }
 
 function scrollUp() {
@@ -114,4 +116,14 @@ function pressed(event) {
 function setLocalstorage() {
   localStorage.getItem("itemsList") ||
     localStorage.setItem("itemsList", JSON.stringify([]));
+}
+
+function setCartIndicator() {
+  const localData = JSON.parse(localStorage.getItem("itemsList"));
+  const localDataSize = localData.length;
+
+  cartIndicatorNum.innerHTML = localDataSize;
+  localDataSize
+    ? cartIndicatorElement.classList.remove("indicator__hide")
+    : cartIndicatorElement.classList.add("indicator__hide");
 }
